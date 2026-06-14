@@ -1,0 +1,643 @@
+% =====================================================================
+% When the Benchmark Grades Itself: Two Information Leaks in
+% Football Player-Representation Evaluation
+%
+% PORTING NOTE (ECIR / Springer LNCS):
+% This file uses the standard `article` class for a clean, self-contained
+% build. To port to Springer LNCS (e.g. for an ECIR submission):
+%   1. Replace the preamble block marked "ARTICLE PREAMBLE" with:
+%        \documentclass{llncs}
+%        \usepackage{graphicx,booktabs,amsmath,amssymb,url}
+%   2. Replace \maketitle's \author/\date block with the llncs
+%        \author{...}\institute{...} form, and add \maketitle.
+%   3. Replace the unnumbered abstract environment with the llncs
+%        \begin{abstract}...\end{abstract} placed before \section{Introduction}.
+%   4. The body (\section/\subsection, tables, \cite, bibliography) is
+%        already LNCS-compatible and needs no further change.
+% =====================================================================
+
+% --------------------------- ARTICLE PREAMBLE ------------------------
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+\title{When the Benchmark Grades Itself:\\
+Two Information Leaks in Football\\ Player-Representation Evaluation}
+\author{Aditya Patni\\ Independent Researcher\\ \texttt{aditya@latimal.com}}
+\date{June 2026}
+% ---------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Learned representations of football (soccer) players are routinely reported to
+capture playing style, yet the field validates them in ways that leak the
+relevance signal into the model being graded. We identify two such leaks, give
+leakage-free protocols, and release an open benchmark and evaluator. First, a
+set-transformer over anonymized StatsBomb 360 freeze-frames scores 0.878
+within-tournament identity Top-1 under a random split but collapses to 0.188
+under a match-disjoint split (disjoint confidence intervals), with a same-match
+control at 0.889 isolating match-context rather than enduring style; the
+collapse reproduces for static heatmap representations (a parameter-free heatmap
+and a Player Vectors-style NMF), so it is a property of the split protocol, not
+one architecture, though we do not claim a discriminatively-trained network such
+as 6MapNet collapses identically. Second, models graded against their own
+clusters reach nDCG@10 of about 0.99, but on an external benchmark anchored to
+realized like-for-like replacement transfers, no learned representation we test
+beats a raw-statistics nearest-neighbour on all-candidates retrieval, the
+primary metric -- a null the benchmark is powered to reject a 0.007-MAP
+advantage against. This holds for a faithful Player Vectors reproduction, a
+purpose-trained metric learner, and genuinely orthogonal richer inputs
+(event-transformer, VAEP, and 360 spatial features), and replicates across two
+disjoint player pools; within-role retrieval is near-floor and underpowered, so
+we confine claims to all-candidates. We also correct a dependence error in the
+field's significance testing: about 1363 queries collapse to roughly 22 position
+components (effective count about 8), so per-query tests understate variance and
+the naive p is about ten times too small.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Player-similarity search (``find a midfielder like X''), style fingerprinting,
+and representation learning over event and spatial data are all active areas
+of football analytics. A less examined question is how these representations
+are \emph{evaluated}. We find two pervasive pitfalls, and in both cases the
+problem is that information about the relevance signal leaks into the very
+model being graded.
+
+The first pitfall is circular relevance. Similarity quality is judged against
+labels derived from the model itself, such as k-means archetypes or role
+clusters, or else against anecdotes. A model graded on its own partition can
+score nearly perfectly; our own legacy text benchmark, whose relevance labels
+are the model's k-means clusters, yields nDCG@10 of about 0.99, while the same
+model fails any external test. The second pitfall is match-context leakage.
+Identity and consistency are scored by splitting a player's events at random
+within a tournament, so events from the same match land in both the query and
+the gallery. The model can then recognize ``same game'' rather than enduring
+style.
+
+We instantiate an external, leakage-free protocol for each pitfall and report
+what learned representations actually achieve once the leak is removed. The
+two leaks share a single underlying cause, which we develop in
+Section~\ref{sec:unifying}: the evaluation's assumed independence between the
+relevance signal and the model under test is violated. They break that
+independence in different places, so each needs its own fix.
+
+We treat the two contributions asymmetrically, and say so plainly. The label-leakage
+study (Pitfall~1) is the paper's primary contribution: it ships a full
+external benchmark, many baselines including a faithful published method, and
+a cross-pool generalization result. The feature-leakage study (Pitfall~2) is a
+focused cautionary result on one task and one dataset family, with a
+correspondingly narrower claim. The two-by-two view in
+Section~\ref{sec:unifying} organizes the framework; it is not a claim that the
+two results carry equal evidential weight.
+
+\paragraph{Our contributions are:}
+\begin{enumerate}[leftmargin=*]
+\item An evaluation-leakage framework that distinguishes \emph{label leakage}
+(the relevance labels are produced by the model under test) from
+\emph{feature leakage} (the query and gallery share nuisance input features),
+and shows that both are special cases of a violated independence assumption.
+\item ScoutBench, an external, transfer-anchored similarity-retrieval
+benchmark, together with the resulting negative result: no learned
+representation we test, including a faithful reproduction of Player Vectors,
+beats a raw-statistics nearest-neighbour baseline, and the finding replicates
+across two disjoint player pools.
+\item A cross-match player-identity protocol and the collapse it exposes: a
+set-transformer drops from 0.878 to 0.188 Top-1 once the query and gallery are
+drawn from disjoint matches, with a same-match control isolating match-context.
+\item A dependence and significance correction. The field's default per-query
+bootstrap treats clustered queries as independent and inflates significance by
+roughly an order of magnitude; we develop the corrected block-bootstrap and
+cluster-level tests as a first-class methodological contribution.
+\end{enumerate}
+
+\section{Related Work}
+\label{sec:related}
+
+The methodological survey by Davis et al.~\cite{davis2024methodology} catalogs
+the evaluation protocols used across sports analytics, including the
+consecutive-season nearest-neighbour test for player similarity, and the
+broader pitfalls that attend them. It supports the framing we adopt here: in
+practice, player-similarity and representation work is validated either
+circularly, against labels the model itself produces, or qualitatively,
+through scouting case studies.
+
+The pattern is visible across the representative learned representations.
+Player Vectors~\cite{decroos2019playervectors} builds per-type non-negative
+matrix factorizations over action-location heatmaps and is evaluated through
+consecutive-season player-identity retrieval, where the labels are objective,
+supplemented by qualitative scouting case studies; it does not appeal to
+external transfer ground truth. RisingBALLER~\cite{adjileye2024risingballer},
+a players-as-tokens transformer foundation model, is evaluated quantitatively
+on next-match-statistics prediction, while its similar-player claims remain
+qualitative. SoccerMix~\cite{decroos2020soccermix}, a soft-clustering mixture
+model for action and style, is evaluated qualitatively, as is
+Football2Vec~\cite{magdaci2021football2vec}, a 32-dimensional Word2Vec-style
+player embedding assessed through qualitative cosine nearest neighbours. A
+recent spatial-statistics approach, the spatial similarity index of
+G\'omez-Rubio et al.~\cite{gomezrubio2024spatial} (Lee's statistic and Moran's
+$I$ over kernel-smoothed position heatmaps), is likewise demonstrated only
+through illustrative case studies, with no external relevance ground truth and
+no released benchmark.
+Across this body of work, similarity is therefore validated either against the
+model's own structure or by inspection, never against an external outcome.
+
+Our work sits in the genre of method-level reality checks. A Metric Learning
+Reality Check~\cite{musgrave2020realitycheck} showed that reported gains in
+deep metric learning largely evaporate under fair protocols, and the
+tabular-learning literature has repeatedly found that gradient-boosted trees
+match or beat deep models on typical tabular
+data~\cite{shwartzziv2022tabular,grinsztajn2022whytrees}. Dimensional collapse
+in contrastive learning~\cite{jing2022dimensionalcollapse} offers a plausible
+mechanism for why a learned low-dimensional projection can be lossy relative
+to its raw inputs. Our raw-versus-learned result is the football-similarity
+instance of these findings.
+
+External-outcome evaluation does exist in football analytics, but it targets
+quantities other than similarity. Market-value
+prediction~\cite{marketvalue2023} forecasts a scalar value rather than a
+similarity ranking, and transfer-impact
+forecasting~\cite{dinsdale2022transferportal} predicts the effect of a move.
+Neither uses realized like-for-like replacements as a similarity-retrieval
+ground truth, which is the precise gap ScoutBench fills. The closest neighbour
+to our identity task is 6MapNet~\cite{kim2021sixmapnet}, a triplet network for
+player identity from tracking data. It splits its data by sampling player
+phases per entity into train, validation, and test, rather than by match, so
+phases from a single match can fall into both query and gallery; it may
+therefore be vulnerable to the same match-context leakage we study, and we
+treat it as a candidate to re-evaluate under a match-disjoint split rather than
+as a safe reference.
+
+\section{A Unifying View: Evaluation Leakage}
+\label{sec:unifying}
+
+Both pitfalls are, at bottom, one failure: the evaluation's assumed
+independence between the relevance signal and the model under test is
+violated. In label leakage, the relevance labels are produced by the model
+itself, through its own clusters or archetypes, so the model is graded against
+its own output and scores near-perfectly but meaninglessly. In feature
+leakage, the query and the gallery share input features drawn from the same
+match, so the model can match shared nuisance context instead of the target
+property of enduring identity or style. Table~\ref{tab:twobytwo} arranges the
+two mechanisms against the two task families.
+
+\begin{table}[t]
+\centering
+\caption{The two leakage mechanisms by task family, with the fix that restores
+the broken independence assumption. The two results are not of equal weight:
+the label-leakage row is the paper's primary contribution, the feature-leakage
+cell a focused cautionary result.}
+\label{tab:twobytwo}
+\begin{tabular}{lll}
+\toprule
+Leakage source & Similarity retrieval & Identity / consistency \\
+\midrule
+Label leakage & self-derived archetype relevance, & n/a (identity labels \\
+              & nDCG about 0.99; fix: external & are objective) \\
+              & transfer anchor (ScoutBench) & \\
+\addlinespace
+Feature leakage & mitigated (candidates are & within-tournament split-half, \\
+                & other players) & 0.88; fix: match-disjoint split \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These are two distinct contamination mechanisms, not one mechanism described
+twice. Label leakage violates label-model independence, because the relevance
+labels are generated by the model under test. Feature leakage violates
+query-gallery independence, because the query and gallery share nuisance
+match-context beyond the target property, even though the identity label
+itself is objective and independent of the model. Valid retrieval evaluation
+requires both conditions to hold; each pitfall breaks a different one, and
+each fix restores the broken one, an external label anchor for the first and a
+match-disjoint split for the second. The shared lesson is not a single
+mechanism but a discipline: identify every path from the relevance signal to
+the representation, and sever it.
+
+\section{Pitfall 1: Circular Relevance, and ScoutBench}
+\label{sec:scoutbench}
+
+\subsection{The benchmark}
+\label{sec:scoutbench-task}
+
+ScoutBench Task B grounds similarity in realized like-for-like replacement
+transfers drawn from CC0 transfermarkt data. When a club loses player $X$ at
+sub-position $P$ and signs player $Y$ at $P$ in the same or next window, the
+pair $(X, Y)$ is taken as a \emph{silver} similarity-positive, that is, a label
+that is objective and outcome-derived but noisy rather than a clean
+gold-standard judgment. Each query player is ranked against all others by
+embedding cosine similarity. We report MAP, Hit@$k$, and MRR over all
+candidates as the primary metric, and over same-sub-position candidates as a
+stratified secondary metric. There are 1363 query players drawn from 5868
+pairs, against a gallery of 5668 players derived from StatsBomb open data and
+used for research only.
+
+\subsection{Significance done right}
+\label{sec:scoutbench-stats}
+
+The query-to-relevant graph collapses into 22 connected components, roughly
+one per sub-position, so the queries are not independent. We therefore use a
+block bootstrap that resamples whole components ($B = 10000$) and, separately,
+a conservative cluster-level paired $t$-test over the 22 component means, with
+a Holm correction across the comparison family. The field's default per-query
+bootstrap, which we argue is wrong here, treats the 1363 dependent queries as
+independent. It understates variance by roughly a factor of 1.3 and makes the
+naive $p$-value about ten times too small, that is, it inflates significance by
+roughly an order of magnitude. We treat this correction as a methodological
+contribution in its own right. We also note that the query-weighted block
+bootstrap and the component-equal-weighted cluster $t$-test estimate different
+targets, the effective component count being about 8, so we report both rather
+than presenting one as a conservative version of the other.
+
+\subsection{Results}
+\label{sec:scoutbench-results}
+
+Table~\ref{tab:leaderboard} reports the leaderboard. All-candidates MAP
+(ALL-MAP) is the primary metric; same-position MAP (SP-MAP) is the stratified
+within-role test, which we show below (Sec.~\ref{sec:scoutbench-scope}) is
+near-floor and underpowered. The headline result, on all-candidates, is that no
+learned representation beats the raw-statistics nearest-neighbour baseline,
+while every method clears random.
+
+\begin{table}[t]
+\centering
+\caption{ScoutBench Task B leaderboard. SP-MAP is same-sub-position MAP;
+ALL-MAP is all-candidates MAP (the primary metric). Higher is better.}
+\label{tab:leaderboard}
+\begin{tabular}{lcc}
+\toprule
+Method & SP-MAP & ALL-MAP \\
+\midrule
+fbref percentile & 0.0514 & 0.0082 \\
+pca(card) & 0.0501 & 0.0195 \\
+raw\_card cosine & 0.0498 & 0.0194 \\
+TF-IDF text & 0.0469 & 0.0165 \\
+Player-Vectors (faithful, Decroos \& Davis heatmap-NMF) & 0.0464 & 0.0172 \\
+NMF (over card features) & 0.0450 & 0.0135 \\
+v11 (contrastive embed) & 0.0447 & 0.0162 \\
+card+VAEP & 0.0440 & 0.0088 \\
+random & 0.0369 & 0.0030 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A genuine signal does exist on all-candidates retrieval. The raw card beats
+random by 0.0163 ALL-MAP, which is significant under both the block bootstrap
+($p = 0.0002$) and the conservative component $t$-test ($p = 0.0001$). On
+same-position retrieval the signal is weaker: it is significant under the block
+bootstrap ($p = 0.0002$) but not under the component $t$-test ($p = 0.15$),
+which is consistent with the position prior dominating within a role, since a
+random vector already reaches SP-Hit@10 of about 0.18. The robust
+signal-exists claim is therefore the all-candidates one, and the same-position
+regime sits near the floor.
+
+The null is well-powered on the primary metric and near-floor on the stratified
+one, which we establish by measuring the minimum detectable effect (MDE) of the
+conservative component $t$-test directly from the per-component variance (power
+0.8, $\alpha = 0.05$; \texttt{scoutbench\_power.py}). On all-candidates the MDE
+is about 0.007 MAP, below the best-minus-random spread of 0.0163, so the test
+resolves spread-sized effects: it detects raw beating random (component
+difference $+0.0097$, $p \approx 0$) and would register a
+learned-representation advantage of 0.007 MAP or more, yet the learned methods
+sit at or below raw (raw minus v11 $+0.0008$, $p = 0.49$; raw minus Player
+Vectors $-0.0027$, $p = 0.47$). The all-candidates null is therefore genuine,
+not a failure of power. On same-position the MDE is about 0.017 MAP, exceeding
+the entire 0.0145 spread, so the within-role test cannot resolve even raw
+beating random ($p = 0.15$) because the position prior dominates. We accordingly
+draw no conclusions from same-position differences, including the apparent
+raw-minus-v11 gap; they fall below the label's resolution. This is itself the
+lesson: circular self-labels manufacture an effect (nDCG of about 0.99) far
+above this floor, which is precisely why they look near-perfect.
+
+The off-objective contrastive embedding does not beat raw. Here ``off-objective''
+means the embedding was trained on a different objective than replacement
+retrieval. On all-candidates, the primary and well-powered metric, v11 sits at
+or below raw (raw minus v11 $+0.0008$, component $t$-test $p = 0.49$), a powered
+null. The nominal raw-minus-v11 same-position gap of 0.0051 is significant only
+under the query-weighted block bootstrap ($p$ about 0.02); it does not survive
+the Holm correction and is not robust to the component $t$-test ($p = 0.36$),
+and given the same-position MDE of about 0.017 it falls below the benchmark's
+resolution, so we rest no claim on it.
+
+The faithful, published Player-Vectors baseline also fails to beat raw, which
+is the key external-baseline check. Our reproduction of Player
+Vectors~\cite{decroos2019playervectors} builds 50-by-50 action-location
+heatmaps per type (pass start and end, and shot, cross, and dribble starts),
+applies per-type NMF, draws purely on on-ball events, covers the full gallery
+of 5668 players, and uses none of our card features. It scores SP-MAP 0.0464
+and ALL-MAP 0.0172. It is not significantly different from the raw card: the
+raw-minus-PV gap is 0.0034 SP-MAP (block $p = 0.15$, component $t$
+$p = 0.90$) and 0.0022 ALL-MAP ($p = 0.15$). The canonical published learned
+representation thus ties or slightly trails a raw-statistics
+nearest-neighbour, which moves the claim from ``our models lose'' to ``learned
+representations, including the published Player-Vectors method, do not beat
+raw.'' A secondary NMF over the card features behaves the same way, scoring
+SP-MAP 0.0450, below raw on the query-weighted estimand ($p = 0.003$) but not
+robust to the component-level multiplicity correction.
+
+Purpose-trained, player-disjoint metric learning does not significantly beat
+raw, which is the decisive, non-tautological test. We train a projection
+directly on the replacement objective using a multi-positive InfoNCE loss that
+masks each player's other true replacements, since the replacement graph is
+many-to-many and a naive one-positive-per-row loss would create contradictory
+labels. Evaluated on player-disjoint held-out queries across three seeds, the
+same-position MAP gap of the metric learner minus raw is +0.0008, +0.0006, and
+$-0.0027$, all with $p > 0.37$, while the all-candidates gap is +0.0016,
++0.0024, and +0.0009, consistently small and positive but never significant
+($p$ between 0.19 and 0.68). A predeclared TOST equivalence test, that is, two
+one-sided tests at a $\pm 0.005$ MAP margin, concludes statistical equivalence
+to raw in one of the three seeds and is inconclusive in the other two, where
+the 95\% confidence intervals marginally exceed the margin, for example
+$[-0.006, +0.007]$. The honest statement is that there is no improvement over
+raw in any seed, and equivalence is only partially established: a metric
+learned directly on these features does not beat raw cosine, though we cannot
+fully rule out a sub-0.005-MAP gain.
+
+Richer, orthogonal inputs also do not beat raw on the primary metric, which is
+the strongest test of the claim. Every representation above only reshapes the
+88-dimensional card, so we additionally test inputs the card does not contain: a
+256-dimensional event-transformer embedding over SPADL event sequences (full
+coverage, with similarity-structure Pearson correlation of about 0.01 against
+the card, hence genuinely orthogonal), a 3-dimensional VAEP representation, and
+a StatsBomb-360 spatial fingerprint on a 923-player tournament subset. Fused
+with the card via training-free cosine nearest-neighbour, none beats the raw
+card on all-candidates (card+event SP-MAP 0.0503 against raw's 0.0498; card+VAEP
+and card+event+VAEP at or below raw; card+360, on its subset, 0.0936 against
+raw's 0.1007), and a metric MLP trained over the fused inputs (player-disjoint,
+three seeds) likewise does not (SP-MAP gap $+0.004 \pm 0.004$, all seeds
+non-significant). The one positive lead, reported on the same footing as every
+other claim, is the event embedding alone within-position: SP-MAP \textbf{0.0703
+against raw's 0.0498} (block $p = 0.0002$), the largest within-role effect we
+observe. We do not count it as a win, but for exactly the reason the within-role
+regime decides nothing: it fails the component $t$-test ($p = 0.11$) and does
+not transfer to all-candidates (0.0093 against 0.0194), held to the identical
+near-floor, underpowered standard (same-position MDE about 0.017) we apply to
+raw-versus-random and raw-versus-v11, not a stricter one. Event sequences are
+thus the most promising direction for within-role discrimination and the obvious
+next experiment, not noise to be dismissed; they simply do not clear the bar on
+the metric the benchmark can adjudicate.
+
+Finally, the circular alternative makes the contrast concrete. The same v11
+model scores nDCG@10 of about 0.99 on a benchmark whose relevance is its own
+k-means labels. External grading reverses the verdict.
+
+\subsection{Honest scope of the negative result}
+\label{sec:scoutbench-scope}
+
+The absolute numbers are low. Every method retrieves the realized replacement
+rarely, with same-position Hit@10 of about 0.27, and a random vector already
+reaches 0.175 there because the position prior dominates. The contribution is
+the ordering and the external protocol, not deployable accuracy. The safe claim
+is that no learned representation we test beats a raw-statistics
+nearest-neighbour on all-candidates external transfer-anchored similarity --- a
+null the benchmark is powered to overturn (MDE about 0.007, below the method
+spread), not a large-margin positive result; we confine it to all-candidates
+because same-position is near-floor and underpowered. The faithful
+Player-Vectors reproduction makes this a claim about a published learned method,
+not only about our own models. Two baselines remain for future work:
+RisingBALLER, a transformer foundation model requiring days of training, and
+6MapNet's exact triplet convolutional network under a cross-match split, which
+needs tracking data we lack --- we test the static heatmap family it builds on
+under P2 below.
+
+\subsection{Generalization across player pools}
+\label{sec:scoutbench-generalization}
+
+We re-run Task B independently on two disjoint pools, split by the league from
+which the card was built. Pool A is the top-five men's club leagues, with 3049
+players and 756 queries; Pool B is international tournaments together with
+women's competitions and the ISL and others, with 2619 players and 479
+queries. The conclusion replicates in both. In Pool A no learned
+representation beats raw: raw scores 0.0639 against v11's 0.0637
+(non-significant) and Player-Vectors' 0.0598 (non-significant). In Pool B the
+same holds: raw scores 0.0841 against v11's 0.0648 and Player-Vectors' 0.0677,
+with neither learned method ahead. Raw beats random in both pools, by 0.0182 in
+Pool A (block $p < 0.001$ and component $t$ $p = 0.003$, the cleanest
+signal-exists result) and by 0.0222 in Pool B (block $p = 0.007$). The finding
+is therefore not an artifact of a specific pool. Absolute MAPs are higher
+within each homogeneous pool, since replacement retrieval is easier among more
+similar candidates.
+
+\section{Pitfall 2: Within-Tournament Match-Context Leakage in 360 Identity}
+\label{sec:p2}
+
+\subsection{Task and protocol}
+\label{sec:p2-task}
+
+The task is player-identity retrieval from anonymized 360 freeze-frames. For
+each on-ball event we form up to 23 player point-tokens, each carrying an
+$(x, y)$ location and an actor, teammate, or opponent role. A set-transformer
+is trained contrastively and evaluated on held-out players, with 701 players
+for training and 350 for test, over 528{,}059 events drawn from World Cup 2022,
+Euro 2024, and Euro 2020 across 166 matches. The model is identical across all
+conditions; only the query and target split changes.
+
+\begin{table}[t]
+\centering
+\caption{Within-tournament player-identity Top-1 and MRR by split condition,
+with 95\% player-level bootstrap confidence intervals. The split-half and
+cross-match intervals are disjoint.}
+\label{tab:p2}
+\begin{tabular}{lcc}
+\toprule
+Condition & Top-1 [95\% CI] & MRR \\
+\midrule
+split-half (random, standard) & 0.878 [0.846, 0.905] & 0.924 \\
+same-match control (disjoint halves of one match) & 0.889 [0.859, 0.917] & 0.932 \\
+cross-match (disjoint matches, leakage-free) & 0.188 [0.153, 0.224] & 0.326 \\
+cross-match, no teammate tokens & 0.137 [0.107, 0.171] & 0.274 \\
+reference: cross-tournament / random & 0.178 / 0.007 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Results}
+\label{sec:p2-results}
+
+Table~\ref{tab:p2} reports the conditions. The confidence intervals are
+player-level bootstraps that resample held-out players. The split-half and
+cross-match intervals are disjoint, so the collapse is unambiguous. It is not a
+single-pool artifact: the macro-average that weights each of the three
+tournaments equally matches the pooled number (split-half 0.88, cross-match
+0.19), and every tournament collapses, with cross-match per-tournament Top-1 of
+0.24, 0.15, and 0.19 against split-half values of 0.95, 0.86, and 0.83.
+
+The collapse itself is large. Top-1 falls from 0.878 under split-half to 0.188
+under cross-match, a drop of 0.69, at comparable event volume, about 137
+against 141 events per side, so it is not a data artifact. Within-match
+information is near-sufficient: the same-match positive control scores 0.889,
+so when the query and target share a match, identity is nearly perfect, and
+when they do not, it collapses. One caveat applies, however. The control halves
+a single match, leaving about 71 events per side, so it is not volume-matched
+to the split-half and cross-match conditions at about 140 events per side; it
+isolates the presence of match-shared information rather than a
+volume-controlled effect. The defensible conclusion is that random
+within-profile splitting substantially exploits match-specific information, and
+we cannot cleanly separate match identity from team, lineup, and
+role-within-that-match from genuine short-term individual behaviour.
+
+A small leakage-free signal nonetheless survives. Cross-match Top-1 of 0.188
+greatly exceeds the random baseline of 0.007, dropping to 0.137 once teammate
+tokens are removed. Some individual or structural signal persists, but its
+interpretation as individual style is bounded by the confounds named below.
+
+The collapse is not specific to our architecture, with a bounded generalization
+claim. \emph{Static} heatmap representations collapse the same way under a
+match-disjoint split. A parameter-free multi-channel heatmap (actor location,
+teammate density, and opponent density) drops from 0.806 (95\% CI [0.768,
+0.838]) under random split-half to 0.113 ([0.083, 0.146]) cross-match; a Player
+Vectors-style NMF reduction drops from 0.595 ([0.549, 0.639]) to 0.123 ([0.093,
+0.155]). Both show disjoint split-half and cross-match intervals and a high
+same-match control. The leak is therefore a property of the within-tournament
+random-split protocol, not of any single architecture: it strikes a
+parameter-free histogram and an NMF reduction exactly as it strikes our trained
+set-transformer. An important scope caveat is that these are static, untrained
+representations. We do \emph{not} claim a discriminatively-trained triplet
+convolutional network such as 6MapNet collapses identically, since a learned
+model could in principle acquire match-invariant features a static histogram
+cannot. What we show is that the protocol leaks for the heatmap input family on
+which published methods rest --- Player Vectors directly, and 6MapNet's heatmap
+inputs --- while 6MapNet's exact network needs continuous tracking data we lack
+and remains untested.
+
+The implication should be stated carefully, and we do not accuse the
+literature. Within-tournament random split-half is a tempting,
+seemingly-natural protocol that would inflate identity by roughly 4.7 to 6
+times through match-context leakage. The established literature, however, does
+not obviously use random within-tournament split-half. Player
+Vectors~\cite{decroos2019playervectors} evaluates consecutive-season
+consistency, which is match-disjoint with respect to exact same-match overlap,
+though team and role context can still recur across seasons.
+6MapNet~\cite{kim2021sixmapnet}, the closest neighbour, samples player phases,
+potentially several from one match, into train, validation, and test rather
+than splitting by match; and the static heatmap input family it builds on
+collapses under our match-disjoint split (above), so a phase-sampling protocol
+like 6MapNet's is exposed in principle. Whether its trained network actually
+collapses is untested --- it needs tracking data we lack --- so we flag it as a
+candidate to re-evaluate, not a proven case and not a safe reference. Our result is
+therefore a cautionary protocol finding together with a cheaper safe
+alternative: cross-match-within-season splitting recovers match-disjointness
+without requiring multiple seasons, and a same-match positive control should
+accompany any identity claim.
+
+Two residual threats deserve naming, though neither is fatal. First, train-time
+leakage: the encoder was trained with random-half, same-match positives, so it
+may have learned to exploit match context, and a model trained with cross-match
+positives might recover signal. We therefore claim only that, as trained and
+evaluated, the 0.88 figure reflects match context, not that individual style is
+unlearnable from 360 data. Second, the no-teammate ablation at 0.137 also
+removes about half the input tokens, confounding model capacity with leakage
+type; a cleaner test would permute teammate identities rather than delete
+tokens, which we leave to future work.
+
+\section{Leakage-Free Protocols}
+\label{sec:protocols}
+
+We package the two fixes as reusable protocols. ScoutBench Task B is an
+external, transfer-anchored similarity-retrieval evaluation with an open
+evaluator, a block bootstrap paired with a cluster $t$-test and Holm
+correction, and all-candidates retrieval as the primary metric. The cross-match
+identity protocol is a match-disjoint query and target split, volume-comparable
+to split-half at about 140 events per side, accompanied by a same-match
+positive control. Both ship with code and corrected baselines, and both are
+cheap to adopt.
+
+\section{Recommendations}
+\label{sec:recommendations}
+
+Three recommendations follow directly. First, never grade similarity against a
+model's own labels; use external or outcome anchors, and always report the
+random-baseline floor. Second, for identity and consistency, split by match or
+by season, never randomly within a competition, and include a same-match
+control. Third, treat queries as clustered into position components, use
+cluster-level inference, and report absolute floors, effect sizes, and the
+test's minimum detectable effect rather than $p$-values alone --- a null is only
+informative if the benchmark could have detected a real advantage of the
+relevant size (here, well-powered on all-candidates, near-floor within-role).
+
+\section{Threats to Validity and Limitations}
+\label{sec:threats}
+
+The replacement labels are silver: realized replacements encode budget,
+availability, and positional need, not pure similarity. We checked their
+validity directly. Realized replacements sit at a mean similarity-percentile of
+0.549 among same-position players, with a sub-position-clustered confidence
+interval of $[0.521, 0.585]$ that excludes the 0.50 null, and replacement
+cosine of 0.449 against a random-same-position 0.404. The label therefore
+carries genuine but weak stylistic similarity signal beyond position; it is
+noisy rather than pure noise. This coheres the benchmark: a weak label signal
+explains why all methods beat random yet cluster near the floor and none
+separates cleanly, since the raw card captures the linearly-available
+similarity and the residual is mostly non-stylistic transfer noise.
+
+The evaluation draws on a single dataset family, StatsBomb open and Wyscout
+public, which is non-commercial. Cross-pool generalization is shown, since the
+result replicates on top-five men's leagues and on tournaments, women's, and
+other competitions (Section~\ref{sec:scoutbench-generalization}), but
+cross-dataset generalization on a fully independent provider remains future
+work. The learned-model coverage on ScoutBench includes a faithful published
+Player-Vectors baseline that ties raw, v11, a purpose-trained metric learner,
+NMF, and card+VAEP, all of which fail to beat raw; RisingBALLER as a
+transformer foundation model remains future work. On the 360 task, training
+with cross-match positives might learn a less-leaky encoder and partially
+recover signal, which is an open question rather than a refutation.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Two widely-used styles of player-representation evaluation grade the model
+against information that the model can see. When relevance labels come from the
+model's own clusters, scores saturate near 0.99 and mean nothing; when query
+and gallery come from the same match, an identity score of 0.878 collapses to
+0.188 once the matches are made disjoint. In both cases the failure is the
+same: a path runs from the relevance signal back into the representation under
+test. The fixes differ only in where that path is cut, an external transfer
+anchor for label leakage and a match-disjoint split for feature leakage, and
+both are cheap to adopt. The discipline that ties them together is a single
+instruction we offer as the paper's takeaway: identify every path from the
+relevance signal to the representation, and sever it. Under that discipline, no
+learned representation we test beats a raw-statistics nearest-neighbour on
+all-candidates external transfer-anchored similarity --- the published Player
+Vectors method included, and on a benchmark powered to have detected such an
+advantage --- which relocates the open problem from better embeddings to better,
+externally-grounded labels.
+
+\section*{Reproducibility}
+\label{sec:repro}
+
+The ScoutBench code lives in \texttt{football\_embed/evaluation/}, comprising
+\texttt{scoutbench.py}, \texttt{scoutbench\_significance.py},
+\texttt{scoutbench\_blockboot.py} (block bootstrap, component $t$-test, and
+Holm correction), \texttt{scoutbench\_extended.py},
+\texttt{scoutbench\_metric\_baseline.py} (multi-positive loss and TOST),
+\texttt{scoutbench\_label\_validity.py},
+\texttt{scoutbench\_generalization.py} (cross-pool), and
+\texttt{scoutbench\_power.py} (minimum detectable effect / sensitivity), with the
+Player-Vectors builder at
+\texttt{football\_embed/data/player\_vectors\_nmf.py}; results are
+written to \texttt{data/processed/benchmark/*.json}. The 360 protocol lives in
+\texttt{sb360\_crossmatch\_killtest.py} (split-half, cross-match, same-match
+control, and no-teammate conditions) and
+\texttt{sb360\_6mapnet\_crossmatch.py} (the static heatmap family), with data in
+\texttt{sb360\_sets\_matchkeyed.npz} (offline-rebuilt and validated) and
+results in \texttt{sb360\_crossmatch\_killtest.json}. The card matrix is
+sanitized (clipped to $\pm 50$ and passed through nan-to-num), and aggregate
+metrics are confirmed unchanged; similarity matrices are verified finite and
+bounded ($|\cos| \le 1.0$ by direct checks). A spurious BLAS matmul runtime
+warning appears on some macOS Arrow and Accelerate builds but does not affect
+results, and is suppressed at the call site where this was verified.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

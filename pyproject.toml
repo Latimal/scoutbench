@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=75.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scoutbench"
+version = "0.1.0"
+description = "ScoutBench: an external transfer-anchored benchmark for football player-similarity representations"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Aditya Patni", email = "aditya@latimal.com"}]
+
+# Base deps are light and torch-free: enough to score submissions and run the full
+# ScoutBench Task B result + all statistics. The learned-baseline stack (torch +
+# sentence-transformers) lives in the `[v11]` extra and is only needed to reproduce the
+# `v11` contrastive method and the 360 identity runs (Task A / P2).
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "pyarrow>=14.0",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+# Minimal deps to score submissions and reproduce the ScoutBench core Task B
+# result (raw/random/file methods, block-bootstrap stats, label validity,
+# generalization, sensitivity). See requirements.lock for the exact pins.
+benchmark = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "pandas>=2.0",
+    "pyarrow>=14.0",
+]
+# The learned-baseline stack: only needed to reproduce the `v11` contrastive method
+# and the 360 identity runs (Task A / P2). Task B + all statistics are torch-free.
+v11 = [
+    "torch>=2.0",
+    "sentence-transformers>=3.0",
+]
+dev = [
+    "ruff>=0.3",
+    "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/aditya-latimal/scoutbench"
+Paper = "https://github.com/aditya-latimal/scoutbench/blob/main/paper/paper.pdf"
+
+[project.scripts]
+scoutbench-eval = "scoutbench.evaluate:main"
+
+[tool.setuptools.packages.find]
+include = ["scoutbench*", "football_embed*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+# football_embed/ is vendored research code (the harness ScoutBench was carved from);
+# the lint-gated surface is the scoutbench/ front door + tests/.
+extend-exclude = ["football_embed", "build_repr_card_vaep.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

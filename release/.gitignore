@@ -1,0 +1,7 @@
+# The frozen ScoutBench release is REDISTRIBUTABLE (CC0-derived) and meant to be
+# committed, but the repo-root .gitignore ignores *.parquet globally. Re-include
+# this directory's redistributable artifacts.
+!*.csv
+!*.parquet
+!manifest.json
+!*.md

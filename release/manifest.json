@@ -1,0 +1,16 @@
+{
+  "name": "ScoutBench Task B ground-truth release",
+  "task": "external transfer-anchored player-similarity retrieval",
+  "license": "CC0 (derived solely from transfermarkt CC0 fields: id, name, sub-position)",
+  "provenance": "see DATA.md -- labels are realized like-for-like replacement transfers",
+  "n_directed_pairs": 11736,
+  "n_players_in_graph": 1363,
+  "n_query_players_scored": 1363,
+  "n_in_gallery": 1363,
+  "note": "Players with in_gallery=False are part of the label graph but absent from the StatsBomb-derived gallery, so they are NOT scored; the harness scores the is_query=True players (gallery members with >=1 relevant).",
+  "files": {
+    "pairs_csv": "scoutbench_taskb_pairs.csv",
+    "pairs_parquet": "scoutbench_taskb_pairs.parquet",
+    "players_csv": "scoutbench_taskb_players.csv"
+  }
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use ScoutBench, please cite the accompanying paper."
+title: "ScoutBench: An External Transfer-Anchored Benchmark for Football Player-Similarity Representations"
+type: software
+authors:
+  - family-names: Patni
+    given-names: Aditya
+    email: aditya@latimal.com
+keywords:
+  - football analytics
+  - soccer
+  - player similarity
+  - information retrieval
+  - benchmark
+  - evaluation
+  - data leakage
+  - representation learning
+license: MIT
+repository-code: "https://github.com/aditya-latimal/scoutbench"
+preferred-citation:
+  type: article
+  title: "When the Benchmark Grades Itself: Two Information Leaks in Football Player-Representation Evaluation"
+  authors:
+    - family-names: Patni
+      given-names: Aditya
+  year: 2026

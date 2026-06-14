@@ -1,0 +1,1364 @@
+player_id,player_name,sub_position,is_query,in_gallery
+2989,Paolo Guerrero,Centre-Forward,True,True
+3333,James Milner,Central Midfield,True,True
+7161,Jonas Hofmann,Attacking Midfield,True,True
+8198,Cristiano Ronaldo,Centre-Forward,True,True
+9500,David Marshall,Goalkeeper,True,True
+10471,Luiz Gustavo,Defensive Midfield,True,True
+11111,Ramiro Funes Mori,Centre-Back,True,True
+12029,Ludovic Butelle,Goalkeeper,True,True
+12249,Éver Banega,Central Midfield,True,True
+12282,Daley Blind,Centre-Back,True,True
+14086,Ashley Young,Right-Back,True,True
+15452,Raúl Albiol,Centre-Back,True,True
+16136,Dante,Centre-Back,True,True
+16911,Kasper Schmeichel,Goalkeeper,True,True
+17965,Hugo Lloris,Goalkeeper,True,True
+18644,Álvaro Negredo,Centre-Forward,True,True
+18922,Karim Benzema,Centre-Forward,True,True
+18940,Rémy Riou,Goalkeeper,True,True
+19041,Gökhan Inler,Defensive Midfield,True,True
+20506,Andrés Guardado,Central Midfield,True,True
+21327,Ron-Robert Zieler,Goalkeeper,True,True
+22141,Antonio Mirante,Goalkeeper,True,True
+22628,Benoît Costil,Goalkeeper,True,True
+22860,Jesper Hansen,Goalkeeper,True,True
+23951,Steve Mandanda,Goalkeeper,True,True
+25488,Antonio Candreva,Right Midfield,True,True
+25508,Salvatore Sirigu,Goalkeeper,True,True
+26485,Jérôme Boateng,Centre-Back,True,True
+27389,Kévin Gameiro,Centre-Forward,True,True
+27490,Jean-Louis Leca,Goalkeeper,True,True
+27493,Iván Cuéllar,Goalkeeper,True,True
+27807,Daniele Padelli,Goalkeeper,True,True
+27992,Luka Modrić,Central Midfield,True,True
+28140,Max Gradel,Left Winger,True,True
+28356,Denis Petric,Goalkeeper,True,True
+28396,Edin Dzeko,Centre-Forward,True,True
+28973,Steven Davis,Central Midfield,True,True
+29241,Thiago Silva,Centre-Back,True,True
+29559,Guillermo Ochoa,Goalkeeper,True,True
+29692,Lukasz Fabianski,Goalkeeper,True,True
+29712,John Ruddy,Goalkeeper,True,True
+30321,Óscar Trejo,Attacking Midfield,True,True
+30825,Marco Ruben,Centre-Forward,True,True
+31067,Jonathan de Guzmán,Central Midfield,True,True
+31909,Toni Kroos,Central Midfield,True,True
+32113,Armando Izzo,Centre-Back,True,True
+32467,Ivan Rakitic,Central Midfield,True,True
+33210,Przemyslaw Tyton,Goalkeeper,True,True
+33571,Lorenzo De Silvestri,Right-Back,True,True
+33781,Vito Mannone,Goalkeeper,True,True
+33829,José Fonte,Centre-Back,True,True
+33873,Asmir Begovic,Goalkeeper,True,True
+34283,Lazaros Christodoulopoulos,Attacking Midfield,True,True
+34322,Sokratis Papastathopoulos,Centre-Back,True,True
+34400,Vladimir Stojkovic,Goalkeeper,True,True
+34601,Raúl García,Centre-Forward,True,True
+34784,Lasse Schöne,Defensive Midfield,True,True
+35047,Axel Witsel,Defensive Midfield,True,True
+35207,Marco Reus,Attacking Midfield,True,True
+36139,Dušan Tadić,Right Winger,True,True
+37666,Arturo Vidal,Central Midfield,True,True
+37838,Dejan Lovren,Centre-Back,True,True
+37920,Kamil Grosicki,Left Winger,True,True
+38253,Robert Lewandowski,Centre-Forward,True,True
+38746,Tomas Pekhart,Centre-Forward,True,True
+39152,Radamel Falcao,Centre-Forward,True,True
+39259,Makoto Hasebe,Centre-Back,True,True
+39728,Mats Hummels,Centre-Back,True,True
+39983,Leonardo Bonucci,Centre-Back,True,True
+40014,Alaixys Romao,Defensive Midfield,True,True
+40204,Joe Hart,Goalkeeper,True,True
+40433,Alexis Sánchez,Second Striker,True,True
+40478,Roman Neustädter,Centre-Back,True,True
+40613,Jack Cork,Defensive Midfield,True,True
+40633,Milan Badelj,Defensive Midfield,True,True
+40687,Mathieu Valbuena,Attacking Midfield,True,True
+41355,Ricky van Wolfswinkel,Centre-Forward,True,True
+41384,Marko Arnautovic,Centre-Forward,True,True
+42072,Tobias Kempe,Central Midfield,True,True
+42205,Yann Sommer,Goalkeeper,True,True
+42460,Ivan Perišić,Left Winger,True,True
+42710,Toby Alderweireld,Centre-Back,True,True
+43250,Jan Vertonghen,Centre-Back,True,True
+43512,Ömer Toprak,Centre-Back,True,True
+44058,Wojciech Szczesny,Goalkeeper,True,True
+44059,Ervin Zukanovic,Centre-Back,True,True
+44062,Antonio Adán,Goalkeeper,True,True
+44068,Juan Mata,Attacking Midfield,True,True
+44162,Miralem Pjanić,Central Midfield,True,True
+44352,Luis Suárez,Centre-Forward,True,True
+44466,Sebastian Rode,Central Midfield,True,True
+45146,Mario Balotelli,Centre-Forward,True,True
+45314,Federico Fazio,Centre-Back,True,True
+45320,Ángel Di María,Right Winger,True,True
+45333,James McCarthy,Central Midfield,True,True
+45403,André Ayew,Centre-Forward,True,True
+45494,Wayne Hennessey,Goalkeeper,True,True
+45660,Eric-Maxim Choupo-Moting,Centre-Forward,True,True
+45672,Kevin Trapp,Goalkeeper,True,True
+46001,Moussa Sissoko,Central Midfield,True,True
+46083,Domagoj Vida,Centre-Back,True,True
+46104,Stevan Jovetic,Centre-Forward,True,True
+46413,Ante Budimir,Centre-Forward,True,True
+46415,Duje Cop,Centre-Forward,True,True
+46552,Kamil Glik,Centre-Back,True,True
+46580,Andrej Kramaric,Attacking Midfield,True,True
+47085,Nenad Tomovic,Centre-Back,True,True
+47713,Mamadou Sakho,Centre-Back,True,True
+48015,Lukas Hradecky,Goalkeeper,True,True
+48067,Artem Dzyuba,Centre-Forward,True,True
+48164,Slobodan Medojevic,Defensive Midfield,True,True
+48634,Fedor Kudryashov,Left-Back,True,True
+48859,Simon Kjær,Centre-Back,True,True
+48870,Jonas Lössl,Goalkeeper,True,True
+49499,Georginio Wijnaldum,Central Midfield,True,True
+50219,Simon Mignolet,Goalkeeper,True,True
+51100,Peter Pekarík,Right-Back,True,True
+51152,Aleksandar Mitrović,Centre-Forward,True,True
+51321,Darren Randolph,Goalkeeper,True,True
+51452,Joe Allen,Central Midfield,True,True
+51471,Mateo Kovacic,Central Midfield,True,True
+51676,Ermin Bicakcic,Centre-Back,True,True
+51894,Mert Günok,Goalkeeper,True,True
+52119,Patrick van Aanholt,Left-Back,True,True
+52403,Dimitrios Siovas,Centre-Back,True,True
+52570,Fraser Forster,Goalkeeper,True,True
+52769,Willian,Left Winger,True,True
+53077,Alberto Botía,Centre-Back,True,True
+53350,Egor Filipenko,Centre-Back,True,True
+53418,Kevin Kampl,Central Midfield,True,True
+53533,Carlos Zambrano,Centre-Back,True,True
+53622,İlkay Gündoğan,Central Midfield,True,True
+54235,Iker Muniain,Left Winger,True,True
+54716,Steven Vitória,Centre-Back,True,True
+54781,Nicolás Otamendi,Centre-Back,True,True
+54846,Fabian Holland,Left-Back,True,True
+54906,Matteo Darmian,Right-Back,True,True
+55089,Oliver Baumann,Goalkeeper,True,True
+55508,Lewis Holtby,Central Midfield,True,True
+55619,Nordin Amrabat,Right Winger,True,True
+55687,Ritchie De Laet,Right-Back,True,True
+55735,Henrikh Mkhitaryan,Central Midfield,True,True
+55742,Harry Arter,Central Midfield,True,True
+55769,Danilo D'Ambrosio,Centre-Back,True,True
+55972,Guram Kashia,Centre-Back,True,True
+56066,Enzo Pérez,Defensive Midfield,True,True
+56100,Leon Balogun,Centre-Back,True,True
+56331,Bas Dost,Centre-Forward,True,True
+56416,Dries Mertens,Second Striker,True,True
+56810,Adrien Silva,Central Midfield,True,True
+56818,Morgan Schneiderlin,Defensive Midfield,True,True
+57071,Péter Gulácsi,Goalkeeper,True,True
+57134,Matthieu Dreyer,Goalkeeper,True,True
+57162,Sofiane Feghouli,Defensive Midfield,True,True
+57216,Ismaël Traoré,Centre-Back,True,True
+57280,Giacomo Bonaventura,Attacking Midfield,True,True
+57370,Damien Da Silva,Centre-Back,True,True
+58330,Víctor Díaz,Right-Back,True,True
+58489,Kyriakos Papadopoulos,Centre-Back,True,True
+58864,Pierre-Emerick Aubameyang,Centre-Forward,True,True
+59016,David Alaba,Centre-Back,True,True
+59027,Roman Bürki,Goalkeeper,True,True
+59032,Aleksandar Dragovic,Centre-Back,True,True
+59054,Lukas Hinterseer,Centre-Forward,True,True
+59238,Marwin Hitz,Goalkeeper,True,True
+59322,Oleksandr Karavaev,Right-Back,True,True
+59377,David de Gea,Goalkeeper,True,True
+59597,Maciej Rybus,Left-Back,True,True
+59631,Nacer Chadli,Left Winger,True,True
+59641,Denis Odoi,Centre-Back,True,True
+59866,Victor Moses,Right Midfield,True,True
+60542,Maxime Gonalons,Defensive Midfield,True,True
+60561,Anthony Lopes,Goalkeeper,True,True
+60577,Nicolas N'Koulou,Centre-Back,True,True
+60599,Samuel Souprayen,Centre-Back,True,True
+60603,Kévin Théophile-Catherine,Centre-Back,True,True
+61253,José Callejón,Right Winger,True,True
+61592,James Tomkins,Centre-Back,True,True
+61651,Jordan Henderson,Defensive Midfield,True,True
+61841,Adam Smith,Right-Back,True,True
+61842,Andros Townsend,Right Winger,True,True
+62415,Panagiotis Tachtsidis,Defensive Midfield,True,True
+62945,Luis Hernández,Centre-Back,True,True
+63342,Leroy Fer,Defensive Midfield,True,True
+63463,Daniel Wass,Central Midfield,True,True
+63494,Étienne Capoue,Defensive Midfield,True,True
+63821,Aron Gunnarsson,Defensive Midfield,True,True
+63837,André André,Central Midfield,True,True
+64000,Tomáš Vaclík,Goalkeeper,True,True
+64134,Néstor Araújo,Centre-Back,True,True
+64399,Vicente Guaita,Goalkeeper,True,True
+64598,Bernardo Espinosa,Centre-Back,True,True
+64793,Leonardo Pavoletti,Centre-Forward,True,True
+65318,Jaume Costa,Left-Back,True,True
+65467,Vicente Iborra,Defensive Midfield,True,True
+66106,Sergio Canales,Attacking Midfield,True,True
+66934,Cheikhou Kouyaté,Defensive Midfield,True,True
+67797,Milan Borjan,Goalkeeper,True,True
+68033,Steven Zuber,Left Winger,True,True
+68390,Séamus Coleman,Right-Back,True,True
+68863,Mauro Icardi,Centre-Forward,True,True
+68864,Kevin Strootman,Central Midfield,True,True
+69015,Andriy Yarmolenko,Right Winger,True,True
+69374,Adem Ljajic,Attacking Midfield,True,True
+69633,Christian Eriksen,Attacking Midfield,True,True
+70209,Adama Traoré,Left-Back,True,True
+71271,Adrián San Miguel,Goalkeeper,True,True
+71292,Jonjo Shelvey,Central Midfield,True,True
+71570,Iago Herrerín,Goalkeeper,True,True
+72047,Iago Aspas,Centre-Forward,True,True
+72441,Rafael Tolói,Centre-Back,True,True
+72476,Bernd Leno,Goalkeeper,True,True
+72522,Luuk de Jong,Centre-Forward,True,True
+73185,Lucas Pérez,Centre-Forward,True,True
+73396,David Ospina,Goalkeeper,True,True
+73517,Ørjan Nyland,Goalkeeper,True,True
+73734,Steven Nzonzi,Defensive Midfield,True,True
+73741,Souza,Defensive Midfield,True,True
+73782,Adrián Ramos,Centre-Forward,True,True
+74228,Marc Muniesa,Centre-Back,True,True
+74294,Nemanja Gudelj,Defensive Midfield,True,True
+74297,Gaël Kakuta,Attacking Midfield,True,True
+74683,Nemanja Matić,Defensive Midfield,True,True
+74842,Mario Götze,Attacking Midfield,True,True
+74857,Marc-André ter Stegen,Goalkeeper,True,True
+74869,Francis Coquelin,Defensive Midfield,True,True
+74960,Martin Dúbravka,Goalkeeper,True,True
+75127,Ezequiel Muñoz,Centre-Back,True,True
+75458,Robin Olsen,Goalkeeper,True,True
+75471,Yannick Bolasie,Centre-Forward,True,True
+75489,Niclas Füllkrug,Centre-Forward,True,True
+76163,Franco Vázquez,Attacking Midfield,True,True
+77026,Raúl Albentosa,Centre-Back,True,True
+77100,Lucas Moura,Right Winger,True,True
+77547,Ehsan Hajsafi,Left-Back,True,True
+77825,Etrit Berisha,Goalkeeper,True,True
+79377,Genki Haraguchi,Attacking Midfield,True,True
+79422,Keylor Navas,Goalkeeper,True,True
+79517,Shuichi Gonda,Goalkeeper,True,True
+79522,Yuto Nagatomo,Left-Back,True,True
+79642,Shinji Okazaki,Centre-Forward,True,True
+79967,Simon Zoller,Centre-Forward,True,True
+80197,Salomón Rondón,Centre-Forward,True,True
+80293,Aïssa Mandi,Centre-Back,True,True
+80444,Philippe Coutinho,Attacking Midfield,True,True
+80894,Lukasz Skorupski,Goalkeeper,True,True
+81532,Celso Borges,Central Midfield,True,True
+81785,Shinji Kagawa,Attacking Midfield,True,True
+81789,Maya Yoshida,Centre-Back,True,True
+82009,Kevin Volland,Attacking Midfield,True,True
+82048,Nicola Sansone,Left Winger,True,True
+82097,Christoph Kramer,Defensive Midfield,True,True
+82350,Stefan Bell,Centre-Back,True,True
+82442,Olivier Giroud,Centre-Forward,True,True
+82863,Lukas Rupp,Central Midfield,True,True
+82873,Pascal Groß,Central Midfield,True,True
+83002,Hiroki Sakai,Right-Back,True,True
+84085,Timothée Kolodziejczak,Centre-Back,True,True
+84301,Benjamin André,Defensive Midfield,True,True
+84435,Kevin Vogt,Centre-Back,True,True
+84938,Timo Horn,Goalkeeper,True,True
+85240,Eugenio Lamanna,Goalkeeper,True,True
+85289,Jordi Amat,Centre-Back,True,True
+85352,Yunus Mallı,Attacking Midfield,True,True
+85357,Juan Muñiz,Attacking Midfield,True,True
+85383,Rubén Sobrino,Centre-Forward,True,True
+85791,Stefan Lainer,Right-Back,True,True
+85864,Loris Karius,Goalkeeper,True,True
+86202,Antonio Rüdiger,Centre-Back,True,True
+86792,Xherdan Shaqiri,Attacking Midfield,True,True
+88262,Dedryck Boyata,Centre-Back,True,True
+88680,Luca Caldirola,Centre-Back,True,True
+88682,Mattia De Sciglio,Right-Back,True,True
+88683,Mattia Destro,Centre-Forward,True,True
+88684,Giulio Donati,Right-Back,True,True
+88706,Simone Romagnoli,Centre-Back,True,True
+88755,Kevin De Bruyne,Attacking Midfield,True,True
+88909,Riccardo Saponara,Attacking Midfield,True,True
+90024,Alfred Finnbogason,Centre-Forward,True,True
+90466,Gylfi Sigurdsson,Attacking Midfield,True,True
+90681,Eliaquim Mangala,Centre-Back,True,True
+91059,Joshua King,Centre-Forward,True,True
+91849,Thomas Delaney,Central Midfield,True,True
+91970,Juan Cuadrado,Right Midfield,True,True
+92076,Seung-gyu Kim,Goalkeeper,True,True
+92572,Joel Ward,Right-Back,True,True
+92738,Mateusz Klich,Defensive Midfield,True,True
+92947,Sergi Gómez,Centre-Back,True,True
+93128,Kalidou Koulibaly,Centre-Back,True,True
+93704,Josuha Guilavogui,Defensive Midfield,True,True
+93720,Alexandre Lacazette,Centre-Forward,True,True
+93730,Alexandre Letellier,Goalkeeper,True,True
+93844,Leonardo Bittencourt,Central Midfield,True,True
+93905,Muhamed Besic,Defensive Midfield,True,True
+94005,Sead Kolasinac,Centre-Back,True,True
+94199,Tolga Cigerci,Defensive Midfield,True,True
+94201,Robin Knoche,Centre-Back,True,True
+94308,Marko Dmitrovic,Goalkeeper,True,True
+94529,Stephan El Shaarawy,Left Winger,True,True
+95424,Kyle Walker,Right-Back,True,True
+95438,Marko Livaja,Centre-Forward,True,True
+95641,Darko Brasanac,Central Midfield,True,True
+95732,Martin Braithwaite,Centre-Forward,True,True
+95810,Kieran Trippier,Right-Back,True,True
+95976,Alex McCarthy,Goalkeeper,True,True
+96341,Romelu Lukaku,Centre-Forward,True,True
+96533,Youssef El Arabi,Centre-Forward,True,True
+98249,Takashi Inui,Left Winger,True,True
+98888,Artur Ioniță,Central Midfield,True,True
+99227,Andrea Bertolacci,Central Midfield,True,True
+99232,Marco D'Alessandro,Right Winger,True,True
+99331,Jannik Vestergaard,Centre-Back,True,True
+99343,Ander Herrera,Central Midfield,True,True
+99352,Rubén Pardo,Central Midfield,True,True
+99397,Karl Darlow,Goalkeeper,True,True
+99559,Alberto Perea,Left Winger,True,True
+99922,Marc Bartra,Centre-Back,True,True
+100986,Thomas Meunier,Right-Back,True,True
+101118,Joel Robles,Goalkeeper,True,True
+102226,Thorgan Hazard,Attacking Midfield,True,True
+102427,Sebastián Coates,Centre-Back,True,True
+103427,Chris Smalling,Centre-Back,True,True
+103565,Wahbi Khazri,Left Winger,True,True
+104124,Michail Antonio,Centre-Forward,True,True
+104223,Jordy Clasie,Defensive Midfield,True,True
+104752,Konstantinos Manolas,Centre-Back,True,True
+105470,Alisson,Goalkeeper,True,True
+105521,Ciro Immobile,Centre-Forward,True,True
+106405,Jeffrey Gouweleeuw,Centre-Back,True,True
+106987,Marcel Sabitzer,Central Midfield,True,True
+107010,Stefan Savic,Centre-Back,True,True
+108354,Jordan Ayew,Centre-Forward,True,True
+108390,Thibaut Courtois,Goalkeeper,True,True
+108650,Yuya Osako,Centre-Forward,True,True
+108669,Attila Fiola,Right-Back,True,True
+108880,Koen Casteels,Goalkeeper,True,True
+110036,Dominique Heintz,Centre-Back,True,True
+110366,Sergio Araujo,Centre-Forward,True,True
+110923,Mattia Perin,Goalkeeper,True,True
+111038,Dennis Appiah,Right-Back,True,True
+111051,Nampalys Mendy,Defensive Midfield,True,True
+111078,Emil Forsberg,Left Winger,True,True
+111196,Stefan de Vrij,Centre-Back,True,True
+111275,Philipp Max,Left-Back,True,True
+111347,Lorenzo Tonelli,Centre-Back,True,True
+111455,Granit Xhaka,Defensive Midfield,True,True
+111508,Allan Nyom,Right-Back,True,True
+111524,Ahmed Hegazy,Centre-Back,True,True
+111627,Ryan Mendes,Left Winger,True,True
+111630,Erik Lamela,Right Winger,True,True
+111783,Alejandro Bedoya,Central Midfield,True,True
+112935,Mark Uth,Centre-Forward,True,True
+113039,Niklas Hult,Left-Back,True,True
+113045,Rubén Pérez,Defensive Midfield,True,True
+113133,Germán Pezzella,Centre-Back,True,True
+113707,Rémy Cabella,Attacking Midfield,True,True
+116598,Viktor Claesson,Centre-Forward,True,True
+118022,Younès Belhanda,Attacking Midfield,True,True
+118284,Jordan Ferri,Central Midfield,True,True
+118287,Rachid Ghezzal,Right Winger,True,True
+118303,Mehdi Zeffane,Right-Back,True,True
+118397,Alessandro Schöpf,Central Midfield,True,True
+118689,Leonardo Spinazzola,Left-Back,True,True
+118847,Dominik Kohr,Centre-Back,True,True
+119031,Kaan Ayhan,Defensive Midfield,True,True
+119150,Mislav Orsic,Left Winger,True,True
+119211,Mitchell Weiser,Right-Back,True,True
+119234,Karim Onisiwo,Centre-Forward,True,True
+119235,Carlos Bacca,Centre-Forward,True,True
+119277,Yannick Gerhardt,Central Midfield,True,True
+119296,Emre Can,Centre-Back,True,True
+120095,José Campaña,Central Midfield,True,True
+120205,Michael Gregoritsch,Centre-Forward,True,True
+120629,Alphonse Areola,Goalkeeper,True,True
+120651,Vincent Le Goff,Left-Back,True,True
+121385,Grant Hanley,Centre-Back,True,True
+121477,Craig Dawson,Centre-Back,True,True
+121483,Jan Oblak,Goalkeeper,True,True
+122153,Paul Pogba,Central Midfield,True,True
+122635,Issam Jebali,Centre-Forward,True,True
+122797,Andy Delort,Centre-Forward,True,True
+122840,Loïc Nego,Right-Back,True,True
+123682,Callum Wilson,Centre-Forward,True,True
+124419,Odysseas Vlachodimos,Goalkeeper,True,True
+124502,Matthias Ginter,Centre-Back,True,True
+124555,Cristiano Biraghi,Left-Back,True,True
+124560,Samuele Longo,Centre-Forward,True,True
+124715,Nikola Maksimović,Centre-Back,True,True
+124732,John Brooks,Centre-Back,True,True
+124902,Khouma Babacar,Centre-Forward,True,True
+125314,Pontus Jansson,Centre-Back,True,True
+125781,Antoine Griezmann,Second Striker,True,True
+125783,Sanjin Prcic,Central Midfield,True,True
+126281,Alexander Hack,Centre-Back,True,True
+126414,Hakan Çalhanoğlu,Defensive Midfield,True,True
+126422,Allan,Defensive Midfield,True,True
+126540,Samuel Umtiti,Centre-Back,True,True
+126557,Jonathan Gradit,Centre-Back,True,True
+126656,Faouzi Ghoulam,Left-Back,True,True
+126664,Lucas Digne,Left-Back,True,True
+126665,Idrissa Gueye,Defensive Midfield,True,True
+126673,Adama Soumaoro,Centre-Back,True,True
+126687,Valentin Eysseric,Attacking Midfield,True,True
+126710,Layvin Kurzawa,Left-Back,True,True
+126767,Ali Ahamada,Goalkeeper,True,True
+127032,Serge Aurier,Right-Back,True,True
+127048,Cédric Bakambu,Centre-Forward,True,True
+127076,Jérôme Roussillon,Left-Back,True,True
+127108,Florian Lejeune,Centre-Back,True,True
+127142,Jonas Martin,Defensive Midfield,True,True
+127160,Benjamin Stambouli,Defensive Midfield,True,True
+127181,Benjamin Lecomte,Goalkeeper,True,True
+127187,Abdoulaye Doucouré,Attacking Midfield,True,True
+127188,Maxime Dupé,Goalkeeper,True,True
+127189,Geoffrey Kondogbia,Defensive Midfield,True,True
+128223,Álvaro Morata,Centre-Forward,True,True
+128899,Jack Butland,Goalkeeper,True,True
+128907,Ravel Morrison,Attacking Midfield,True,True
+128969,Mathew Ryan,Goalkeeper,True,True
+129078,Nathan Redmond,Right Winger,True,True
+129476,Gerard Deulofeu,Centre-Forward,True,True
+129513,Alexandru Maxim,Attacking Midfield,True,True
+129554,Steven Berghuis,Right Winger,True,True
+129604,Ezgjan Alioski,Left-Back,True,True
+129674,Jeremy Toljan,Right-Back,True,True
+129693,Gaku Shibasaki,Central Midfield,True,True
+130164,Jordan Pickford,Goalkeeper,True,True
+130353,Hördur Magnússon,Centre-Back,True,True
+130360,Simone Verdi,Attacking Midfield,True,True
+130365,Alessandro Florenzi,Right-Back,True,True
+130394,Gianluca Lapadula,Centre-Forward,True,True
+130765,Stuart Armstrong,Central Midfield,True,True
+131075,Francesco Acerbi,Centre-Back,True,True
+131098,Salvador Ichazo,Goalkeeper,True,True
+131248,Joel Campbell,Second Striker,True,True
+131708,Kenneth Omeruo,Centre-Back,True,True
+131951,Kevin Lasagna,Centre-Forward,True,True
+131967,Daniel O'Shaughnessy,Centre-Back,True,True
+131978,Ross Barkley,Central Midfield,True,True
+131996,Bertrand Traoré,Right Winger,True,True
+132098,Harry Kane,Centre-Forward,True,True
+132529,Jin-su Kim,Left-Back,True,True
+133179,Marten de Roon,Defensive Midfield,True,True
+133834,Marko Leskovic,Centre-Back,True,True
+133838,Karim Ansarifard,Centre-Forward,True,True
+134277,Julian Jeanvier,Centre-Back,True,True
+134425,Raheem Sterling,Right Winger,True,True
+134883,Daniele Baselli,Central Midfield,True,True
+135343,Fabian Schär,Centre-Back,True,True
+135490,Lindsay Rose,Centre-Back,True,True
+135492,Youssouf Sabaly,Right-Back,True,True
+135853,Manuel Lanzini,Attacking Midfield,True,True
+136111,Nicola Leali,Goalkeeper,True,True
+137206,Magomed Ozdoev,Defensive Midfield,True,True
+137616,Okay Yokuşlu,Defensive Midfield,True,True
+138335,Jakob Haugaard,Goalkeeper,True,True
+139208,Virgil van Dijk,Centre-Back,True,True
+139279,Nicolas Pallois,Centre-Back,True,True
+139503,Enner Valencia,Centre-Forward,True,True
+141660,Jesse Lingard,Attacking Midfield,True,True
+142021,Sergi Darder,Central Midfield,True,True
+142310,Willy Boly,Centre-Back,True,True
+142920,Aleksandar Trajkovski,Left Winger,True,True
+143039,Damjan Djokovic,Defensive Midfield,True,True
+143121,Melvyn Lorenzen,Left Winger,True,True
+143424,Alex Oxlade-Chamberlain,Central Midfield,True,True
+143812,Matías Vecino,Central Midfield,True,True
+144028,Leandro Trossard,Left Winger,True,True
+144143,Bartosz Bereszyński,Right-Back,True,True
+145466,Tim Ream,Centre-Back,True,True
+145840,Trent Sainsbury,Centre-Back,True,True
+145988,Wilfried Zaha,Left Winger,True,True
+146227,Jasper Cillessen,Goalkeeper,True,True
+146310,Wataru Endo,Defensive Midfield,True,True
+146854,Wissam Ben Yedder,Centre-Forward,True,True
+147034,Marco van Ginkel,Central Midfield,True,True
+147487,Vincent Aboubakar,Centre-Forward,True,True
+148252,Remo Freuler,Central Midfield,True,True
+148367,Christian Nørgaard,Defensive Midfield,True,True
+148368,Divock Origi,Centre-Forward,True,True
+148455,Mohamed Salah,Right Winger,True,True
+153084,Leon Goretzka,Central Midfield,True,True
+156617,Marcelo Brozović,Defensive Midfield,True,True
+156662,Giorgi Gvelesiani,Centre-Back,True,True
+156775,Greg Stewart,Centre-Forward,True,True
+157373,Vladlen Yurchenko,Attacking Midfield,True,True
+157495,Benjamin Mendy,Left-Back,True,True
+157501,M'Baye Niang,Centre-Forward,True,True
+157509,Kurt Zouma,Centre-Back,True,True
+157635,Yussuf Poulsen,Centre-Forward,True,True
+158327,Julio González,Goalkeeper,True,True
+158863,Iñigo Martínez,Centre-Back,True,True
+159288,Arlind Ajeti,Centre-Back,True,True
+159471,Serge Gnabry,Second Striker,True,True
+160438,Mohamed Elneny,Defensive Midfield,True,True
+160506,Josip Radosevic,Defensive Midfield,True,True
+160986,Matteo Bianchetti,Centre-Back,True,True
+161056,Joshua Kimmich,Defensive Midfield,True,True
+161869,Djibril Sidibé,Right-Back,True,True
+162056,Gonzalo Melero,Central Midfield,True,True
+162434,Niklas Stark,Centre-Back,True,True
+162569,Josef Martínez,Centre-Forward,True,True
+162959,Daniele Rugani,Centre-Back,True,True
+163222,Grégoire Defrel,Centre-Forward,True,True
+164265,Dong-won Ji,Centre-Forward,True,True
+164277,Gen Shoji,Centre-Back,True,True
+164770,Raphaël Varane,Centre-Back,True,True
+164771,Jordan Veretout,Central Midfield,True,True
+164913,Soualiho Meïté,Defensive Midfield,True,True
+164915,Lionel Mpasi-Nzau,Goalkeeper,True,True
+165012,José Rodríguez,Central Midfield,True,True
+165467,Stole Dimitrievski,Goalkeeper,True,True
+165513,Berat Djimsiti,Centre-Back,True,True
+165793,Takumi Minamino,Left Winger,True,True
+165873,Federico Barba,Centre-Back,True,True
+165895,Matteo Politano,Right Winger,True,True
+166601,Niklas Süle,Centre-Back,True,True
+166683,Mamadou Sylla,Centre-Forward,True,True
+167268,Paddy McNair,Centre-Back,True,True
+167329,Alassane Pléa,Centre-Forward,True,True
+167491,Stefano Sabelli,Right-Back,True,True
+167727,Andrea Belotti,Centre-Forward,True,True
+167799,Pierre-Emile Højbjerg,Defensive Midfield,True,True
+167850,Memphis Depay,Second Striker,True,True
+167859,Stefano Sturaro,Central Midfield,True,True
+168063,Filip Mladenovic,Left-Back,True,True
+168157,Leander Dendoncker,Defensive Midfield,True,True
+168337,Ahmed Musa,Left Winger,True,True
+168408,Lubomir Satka,Centre-Back,True,True
+168989,Silvan Widmer,Right-Back,True,True
+169880,Giovanni Di Lorenzo,Right-Back,True,True
+170321,Paul Dummett,Centre-Back,True,True
+170463,Marcel Tisserand,Centre-Back,True,True
+170472,Dimitri Foulquier,Right-Back,True,True
+170481,Jean-Daniel Akpa Akpro,Central Midfield,True,True
+170527,Timo Werner,Centre-Forward,True,True
+170646,Ludwig Augustinsson,Left-Back,True,True
+170838,Salih Uçan,Central Midfield,True,True
+170895,Garry Rodrigues,Right Winger,True,True
+170929,Massadio Haïdara,Left-Back,True,True
+170934,Mario Lemina,Defensive Midfield,True,True
+171424,Riyad Mahrez,Right Winger,True,True
+173146,Gurpreet Singh Sandhu,Goalkeeper,True,True
+173859,Davide Zappacosta,Right Midfield,True,True
+174094,Morgan Sanson,Central Midfield,True,True
+174488,Marios Ikonomou,Centre-Back,True,True
+174733,Omar Colley,Centre-Back,True,True
+174915,Islam Slimani,Centre-Forward,True,True
+175169,Bernard,Left Winger,True,True
+175639,Jonathan Clauss,Right-Back,True,True
+175722,Eric Dier,Centre-Back,True,True
+175961,Ole Selnæs,Defensive Midfield,True,True
+176553,Aymeric Laporte,Centre-Back,True,True
+177476,Nathan Aké,Centre-Back,True,True
+177690,Miguel Trauco,Left-Back,True,True
+177776,César,Goalkeeper,True,True
+177843,Domenico Berardi,Right Winger,True,True
+177847,Adnan Januzaj,Right Winger,True,True
+177907,Harry Maguire,Centre-Back,True,True
+178469,Michael Krmencik,Centre-Forward,True,True
+179184,Michy Batshuayi,Centre-Forward,True,True
+179643,Vladimír Darida,Central Midfield,True,True
+179860,Andraz Sporar,Centre-Forward,True,True
+180337,Sardar Azmoun,Centre-Forward,True,True
+181136,Piotr Zielinski,Central Midfield,True,True
+181375,Sébastien Haller,Centre-Forward,True,True
+181378,Gaëtan Laborde,Centre-Forward,True,True
+181380,Arthur Masuaku,Left-Back,True,True
+181382,Abdoulaye Touré,Defensive Midfield,True,True
+181477,Thievy Bifouma,Left Winger,True,True
+181579,James Ward-Prowse,Central Midfield,True,True
+182201,Ally Samatta,Centre-Forward,True,True
+182381,Quincy Promes,Left Winger,True,True
+182618,Tiemoué Bakayoko,Defensive Midfield,True,True
+182875,Jean-Charles Castelletto,Centre-Back,True,True
+182877,Anthony Martial,Centre-Forward,True,True
+182893,Seko Fofana,Central Midfield,True,True
+182904,Clément Lenglet,Centre-Back,True,True
+182906,Mike Maignan,Goalkeeper,True,True
+182910,Hervin Ongenda,Attacking Midfield,True,True
+182913,Adrien Rabiot,Central Midfield,True,True
+182932,Davy Klaassen,Central Midfield,True,True
+183031,Koffi Djidji,Centre-Back,True,True
+183288,Luke Shaw,Left-Back,True,True
+183318,Jamaal Lascelles,Centre-Back,True,True
+183321,Kevin Mbabu,Right-Back,True,True
+183841,Petar Stojanović,Right Midfield,True,True
+184398,Stephen Kingsley,Left-Back,True,True
+184528,Emil Krafth,Right-Back,True,True
+184573,Victor Lindelöf,Centre-Back,True,True
+184892,Florian Thauvin,Right Winger,True,True
+184894,Alfred Duncan,Central Midfield,True,True
+185024,Georgiy Dzhikiya,Centre-Back,True,True
+185245,Jhon Córdoba,Centre-Forward,True,True
+186590,John Stones,Centre-Back,True,True
+187353,Milos Degenek,Centre-Back,True,True
+187491,Timo Baumgartl,Centre-Back,True,True
+187492,Julian Brandt,Attacking Midfield,True,True
+187587,Ante Rebić,Left Winger,True,True
+187847,Yassine Benzia,Attacking Midfield,True,True
+188077,Ryan Christie,Central Midfield,True,True
+188312,Ramin Rezaeian,Right-Back,True,True
+188470,Francisco Calvo,Centre-Back,True,True
+188862,Guillermo Varela,Right-Back,True,True
+189014,Maxime Crépeau,Goalkeeper,True,True
+189070,Modou Barrow,Left Winger,True,True
+189073,Marcel Hartel,Central Midfield,True,True
+189441,Lucas Ocampos,Left Winger,True,True
+189475,Carlos Gruezo,Defensive Midfield,True,True
+189744,Paul Nardi,Goalkeeper,True,True
+190263,Predrag Rajković,Goalkeeper,True,True
+190393,Corentin Tolisso,Central Midfield,True,True
+190685,Bouna Sarr,Right-Back,True,True
+191422,Mahmoud Dahoud,Central Midfield,True,True
+191891,Arkadiusz Milik,Centre-Forward,True,True
+192009,Unai López,Central Midfield,True,True
+192557,Jackson Irvine,Central Midfield,True,True
+192565,Leroy Sané,Right Winger,True,True
+192635,Nico Elvedi,Centre-Back,True,True
+192735,Stanislav Lobotka,Defensive Midfield,True,True
+192875,William Troost-Ekong,Centre-Back,True,True
+193004,Waldemar Anton,Centre-Back,True,True
+193116,John McGinn,Central Midfield,True,True
+193592,Kristoffer Olsson,Central Midfield,True,True
+193900,Marius Wolf,Right-Back,True,True
+195332,Salem Al-Dawsari,Left Winger,True,True
+195540,Kendall Waston,Centre-Back,True,True
+195736,Florian Grillitsch,Defensive Midfield,True,True
+195778,Alexander Nübel,Goalkeeper,True,True
+196095,Luca Waldschmidt,Centre-Forward,True,True
+196231,Marvin Friedrich,Centre-Back,True,True
+196357,Jonathan Tah,Centre-Back,True,True
+196435,Saidy Janko,Right-Back,True,True
+196522,Dwight Gayle,Centre-Forward,True,True
+196792,Julian Weigl,Defensive Midfield,True,True
+196948,Andreas Christensen,Centre-Back,True,True
+197126,Kenan Kodro,Centre-Forward,True,True
+197300,Federico Bernardeschi,Right Winger,True,True
+197473,Alberto Grassi,Defensive Midfield,True,True
+197747,Alessio Romagnoli,Centre-Back,True,True
+197838,Jamie Vardy,Centre-Forward,True,True
+198067,Filip Helander,Centre-Back,True,True
+198116,Federico Dimarco,Left-Back,True,True
+199248,Bryan Cristante,Defensive Midfield,True,True
+199316,Abdülkerim Bardakcı,Centre-Back,True,True
+199704,Yunis Abdelhamid,Centre-Back,True,True
+199733,Danilo Cataldi,Defensive Midfield,True,True
+199976,Marco Sportiello,Goalkeeper,True,True
+200056,Elseid Hysaj,Right-Back,True,True
+200475,Florin Niță,Goalkeeper,True,True
+200512,Sadio Mané,Left Winger,True,True
+200777,Alex Pritchard,Attacking Midfield,True,True
+201311,Isaac Kiese Thelin,Centre-Forward,True,True
+201574,Angus Gunn,Goalkeeper,True,True
+202228,Milos Veljkovic,Centre-Back,True,True
+202591,Benjamin Henrichs,Right-Back,True,True
+202886,Ruben Loftus-Cheek,Central Midfield,True,True
+203348,Chancel Mbemba,Centre-Back,True,True
+203378,Zakaria Bakkali,Left Winger,True,True
+203394,Andreas Pereira,Central Midfield,True,True
+203412,Andreas Cornelius,Centre-Forward,True,True
+203460,Jack Grealish,Left Winger,True,True
+203496,Nabil Fekir,Attacking Midfield,True,True
+203517,Steven Moreira,Right-Back,True,True
+203853,Oleksandr Zinchenko,Left-Back,True,True
+204047,Matus Bero,Central Midfield,True,True
+204069,Milan Škriniar,Centre-Back,True,True
+204198,Romain Saïss,Centre-Back,True,True
+204294,Saman Ghoddos,Attacking Midfield,True,True
+205054,Norbert Gyömbér,Centre-Back,True,True
+205562,Thomas Lemar,Attacking Midfield,True,True
+205927,Dominik Livakovic,Goalkeeper,True,True
+205938,Mario Pašalić,Central Midfield,True,True
+205940,Marko Pjaca,Left Winger,True,True
+206386,Tin Jedvaj,Centre-Back,True,True
+206542,Robin Quaison,Centre-Forward,True,True
+207302,Sergio Rico,Goalkeeper,True,True
+207834,Yassine Bounou,Goalkeeper,True,True
+208167,Dawid Kownacki,Centre-Forward,True,True
+212723,Djibril Sow,Central Midfield,True,True
+213268,Alireza Jahanbakhsh,Right Winger,True,True
+214056,Daniel Amartey,Centre-Back,True,True
+214316,Luciano Vietto,Centre-Forward,True,True
+214666,Connor Roberts,Right-Back,True,True
+214775,Óliver Torres,Central Midfield,True,True
+214798,Craig Goodwin,Left Winger,True,True
+215114,Thomas Foket,Right-Back,True,True
+215118,Calum Chambers,Centre-Back,True,True
+215599,Lukas Klostermann,Centre-Back,True,True
+215616,Erick Pulgar,Defensive Midfield,True,True
+215864,Mijat Gacinovic,Attacking Midfield,True,True
+215977,Adrien Thomasson,Central Midfield,True,True
+216464,Carlos Fernández,Centre-Forward,True,True
+216569,Jérémie Boga,Left Winger,True,True
+216603,İrfan Can Kahveci,Right Winger,True,True
+217111,Hakim Ziyech,Right Winger,True,True
+217115,Neal Maupay,Centre-Forward,True,True
+218299,Jan Kliment,Centre-Forward,True,True
+220656,László Kleinheisler,Attacking Midfield,True,True
+221958,Roman Yaremchuk,Centre-Forward,True,True
+222209,Thomas Strakosha,Goalkeeper,True,True
+222332,Lasha Dvali,Centre-Back,True,True
+223725,Munir El Haddadi,Attacking Midfield,True,True
+223967,Konrad Laimer,Right-Back,True,True
+223972,Patrick Pentz,Goalkeeper,True,True
+223974,Stefan Posch,Centre-Back,True,True
+223979,Xaver Schlager,Central Midfield,True,True
+224088,Olivier Ntcham,Central Midfield,True,True
+224884,Abdul Rahman Baba,Left-Back,True,True
+225004,Valentín Vada,Central Midfield,True,True
+225055,Jean-Pierre Nsame,Centre-Forward,True,True
+225083,N'Golo Kanté,Defensive Midfield,True,True
+225122,Gonçalo Guedes,Left Winger,True,True
+225657,Philipp Lienhart,Centre-Back,True,True
+225744,Lawrence Shankland,Centre-Forward,True,True
+226012,David Soria,Goalkeeper,True,True
+226074,Alen Halilovic,Attacking Midfield,True,True
+226450,Iver Fossum,Central Midfield,True,True
+227805,Jaume Doménech,Goalkeeper,True,True
+228645,Wout Weghorst,Centre-Forward,True,True
+228948,Thilo Kehrer,Centre-Back,True,True
+228999,Alexis Alégué,Right Winger,True,True
+229006,Franck Honorat,Right Winger,True,True
+229604,Gerónimo Rulli,Goalkeeper,True,True
+229804,Aritz Elustondo,Centre-Back,True,True
+229817,Ali Sowe,Centre-Forward,True,True
+229853,Birama Touré,Defensive Midfield,True,True
+230541,Yoshinori Muto,Centre-Forward,True,True
+232271,Sofiane Boufal,Attacking Midfield,True,True
+232418,Ondrej Duda,Central Midfield,True,True
+232454,Nadiem Amiri,Central Midfield,True,True
+233782,Aïssa Laïdouni,Central Midfield,True,True
+234523,Antonio Sanabria,Centre-Forward,True,True
+234803,Andrew Robertson,Left-Back,True,True
+234811,Rui Silva,Goalkeeper,True,True
+235052,Abderrazak Hamdallah,Centre-Forward,True,True
+235412,Jawad El Yamiq,Centre-Back,True,True
+235540,Oussama Tannane,Attacking Midfield,True,True
+236041,Alexis Blin,Defensive Midfield,True,True
+236045,Denis Bouanga,Left Winger,True,True
+236400,Léo Dubois,Right-Back,True,True
+236471,Ozan Tufan,Central Midfield,True,True
+237641,Amr Warda,Left Winger,True,True
+237658,Michel Aebischer,Central Midfield,True,True
+237662,Breel Embolo,Centre-Forward,True,True
+238266,Duje Caleta-Car,Centre-Back,True,True
+238626,Laurent Abergel,Defensive Midfield,True,True
+238720,Jérôme Prior,Goalkeeper,True,True
+238752,Keita Baldé,Left Winger,True,True
+239743,Przemyslaw Frankowski,Right-Back,True,True
+239941,Lukas Haraslin,Left Winger,True,True
+239962,Denis Vavro,Centre-Back,True,True
+240260,Franjo Prce,Centre-Back,True,True
+240497,Moryké Fofana,Left Winger,True,True
+240692,Reinildo Mandava,Left-Back,True,True
+241119,Clinton N'Jie,Right Winger,True,True
+241229,Jordan Amavi,Left-Back,True,True
+241527,Federico Bonazzoli,Centre-Forward,True,True
+241641,Bernardo Silva,Attacking Midfield,True,True
+242086,Patrik Schick,Centre-Forward,True,True
+242267,Saleh Al-Shehri,Centre-Forward,True,True
+242631,Alex Iwobi,Left Winger,True,True
+242632,Glen Kamara,Central Midfield,True,True
+242940,Edoardo Goldaniga,Centre-Back,True,True
+243028,Jan Bednarek,Centre-Back,True,True
+243188,László Bénes,Central Midfield,True,True
+243633,Aaron Tshibola,Central Midfield,True,True
+243714,Kingsley Coman,Left Winger,True,True
+243879,Charles Pickel,Defensive Midfield,True,True
+244192,Pierluigi Gollini,Goalkeeper,True,True
+244940,Salih Özcan,Defensive Midfield,True,True
+245014,Enis Bardhi,Attacking Midfield,True,True
+245030,Milan Gajic,Right-Back,True,True
+245056,Saša Lukić,Central Midfield,True,True
+245072,Stipe Perica,Centre-Forward,True,True
+245078,Nemanja Radonjic,Left Winger,True,True
+245337,Walker Zimmerman,Centre-Back,True,True
+245537,Nabil Bentaleb,Defensive Midfield,True,True
+245744,Takuma Asano,Right Winger,True,True
+245893,Matt Miazga,Centre-Back,True,True
+246968,Ayoze Pérez,Centre-Forward,True,True
+247380,Arianit Ferati,Attacking Midfield,True,True
+247555,Edimilson Fernandes,Defensive Midfield,True,True
+248732,Paweł Dawidowicz,Centre-Back,True,True
+248738,Sergio Herrera,Goalkeeper,True,True
+249157,Fredrik Jensen,Attacking Midfield,True,True
+249271,Saeid Ezatolahi,Defensive Midfield,True,True
+249565,Youri Tielemans,Central Midfield,True,True
+249730,Guillermo Maripán,Centre-Back,True,True
+250478,Matt Targett,Left-Back,True,True
+250490,Christian Fassnacht,Attacking Midfield,True,True
+250844,Alexander Djiku,Centre-Back,True,True
+250845,José María Giménez,Centre-Back,True,True
+251106,Enes Ünal,Centre-Forward,True,True
+251664,Ivan Toney,Centre-Forward,True,True
+251848,Iñigo Córdoba,Left Winger,True,True
+252641,Pione Sisto,Left Winger,True,True
+252677,José Luis Morales,Centre-Forward,True,True
+253677,Tyrone Mings,Centre-Back,True,True
+253765,Wesley Hoedt,Centre-Back,True,True
+253839,Álvaro Medrán,Central Midfield,True,True
+254285,Lawrence Ati Zigi,Goalkeeper,True,True
+255450,Aleksey Miranchuk,Attacking Midfield,True,True
+255488,Yeray Álvarez,Centre-Back,True,True
+255906,Scott McKenna,Centre-Back,True,True
+255916,DeAndre Yedlin,Right-Back,True,True
+255942,Nicolò Barella,Central Midfield,True,True
+256178,Joe Gomez,Centre-Back,True,True
+256358,Bruno Petkovic,Centre-Forward,True,True
+256361,Daniele Verde,Right Winger,True,True
+257462,Luka Jović,Centre-Forward,True,True
+257474,Vanja Milinković-Savić,Goalkeeper,True,True
+257814,Gregor Kobel,Goalkeeper,True,True
+258070,Ramiro,Central Midfield,True,True
+258216,Kasey Palmer,Attacking Midfield,True,True
+258618,Thuram,Centre-Forward,True,True
+258879,Cameron Borthwick-Jackson,Left-Back,True,True
+258923,Marcus Rashford,Left Winger,True,True
+258964,Guillermo Viscarra,Goalkeeper,True,True
+259953,Rade Krunic,Defensive Midfield,True,True
+260166,Ui-jo Hwang,Attacking Midfield,True,True
+260171,Hyeon-woo Jo,Goalkeeper,True,True
+260827,Joachim Andersen,Centre-Back,True,True
+261504,Aleix García,Central Midfield,True,True
+261905,Suat Serdar,Central Midfield,True,True
+262226,Timothy Castagne,Right-Back,True,True
+262523,Davide Calabria,Right-Back,True,True
+263236,Kevin Danso,Centre-Back,True,True
+263361,Maximilian Wöber,Centre-Back,True,True
+263380,Attila Szalai,Centre-Back,True,True
+263843,Matías Nahuel,Left Winger,True,True
+263918,Aleksandr Golovin,Attacking Midfield,True,True
+264372,Viktor Tsygankov,Right Winger,True,True
+264567,Baptiste Guillaume,Centre-Forward,True,True
+265088,Manuel Locatelli,Defensive Midfield,True,True
+265625,Ajdin Hrustic,Central Midfield,True,True
+266302,Sergej Milinković-Savić,Central Midfield,True,True
+266359,Benjamin Bourigeaud,Central Midfield,True,True
+266795,Gonzalo Escalante,Central Midfield,True,True
+266807,Ángel Correa,Second Striker,True,True
+266935,Mohammed Muntari,Centre-Forward,True,True
+268670,Gerard Gumbau,Defensive Midfield,True,True
+270541,Serhou Guirassy,Centre-Forward,True,True
+271256,Jhonder Cádiz,Centre-Forward,True,True
+271716,Damion Lowe,Centre-Back,True,True
+271787,Deniz Hümmet,Centre-Forward,True,True
+272261,Antonín Barák,Attacking Midfield,True,True
+272587,Daniel-Kofi Kyereh,Attacking Midfield,True,True
+272622,Issa Diop,Centre-Back,True,True
+272636,Harold Moukoudi,Centre-Back,True,True
+272642,Allan Saint-Maximin,Left Winger,True,True
+272855,Paul Onuachu,Centre-Forward,True,True
+272930,Jamiro Monteiro,Central Midfield,True,True
+272999,Miguel Almirón,Right Winger,True,True
+273132,Robin Gosens,Left-Back,True,True
+273152,Nemanja Maksimovic,Central Midfield,True,True
+274461,Felix Passlack,Right-Back,True,True
+274839,Wilfred Ndidi,Defensive Midfield,True,True
+274862,Moses Simon,Left Winger,True,True
+276853,Andries Noppert,Goalkeeper,True,True
+278296,Antonio Raíllo,Centre-Back,True,True
+278359,Borja Iglesias,Centre-Forward,True,True
+279455,Harry Wilson,Right Winger,True,True
+279570,Daler Kuzyaev,Central Midfield,True,True
+280387,Vincent Sierro,Central Midfield,True,True
+280701,Théo Bongonda,Right Winger,True,True
+281404,Kenedy,Left Winger,True,True
+281769,Mario Hermoso,Centre-Back,True,True
+282041,Presnel Kimpembe,Centre-Back,True,True
+282076,Ianis Hagi,Attacking Midfield,True,True
+282660,Maximilian Mittelstädt,Left-Back,True,True
+282810,Carles Pérez,Right Winger,True,True
+283196,Kasper Dolberg,Centre-Forward,True,True
+283628,Tomáš Souček,Defensive Midfield,True,True
+283735,Mattia Zaccagni,Left Winger,True,True
+284165,Steven Bergwijn,Left Winger,True,True
+284727,Jonathan Calleri,Centre-Forward,True,True
+284730,Manuel Akanji,Centre-Back,True,True
+284732,Ramy Bensebaini,Centre-Back,True,True
+284854,Carles Aleñá,Central Midfield,True,True
+284997,Sandesh Jhingan,Centre-Back,True,True
+285322,Federico Ricca,Centre-Back,True,True
+285323,Baptiste Santamaria,Defensive Midfield,True,True
+285548,Fabián Balbuena,Centre-Back,True,True
+286297,Lorenzo Pellegrini,Attacking Midfield,True,True
+286384,Eric Bailly,Centre-Back,True,True
+286415,Pau López,Goalkeeper,True,True
+286779,Jorge Meré,Centre-Back,True,True
+286949,Adam Masina,Centre-Back,True,True
+287578,Sam Adekugbe,Left-Back,True,True
+287579,Sofyan Amrabat,Defensive Midfield,True,True
+287635,Assane Dioussé,Defensive Midfield,True,True
+287792,Oleksandr Tymchyk,Right-Back,True,True
+288121,Janio Bikel,Central Midfield,True,True
+288230,Ousmane Dembélé,Centre-Forward,True,True
+288241,Enock Kwateng,Right-Back,True,True
+288251,Sébastien Salles-Lamonge,Central Midfield,True,True
+289167,Kamil Jóźwiak,Left Winger,True,True
+289216,Stéphane Sparagna,Centre-Back,True,True
+289308,Andrei Burcă,Centre-Back,True,True
+289432,Dylan Batubinsika,Centre-Back,True,True
+289592,Orel Mangala,Defensive Midfield,True,True
+290532,Saïd Benrahma,Left Winger,True,True
+290552,Qazim Laci,Central Midfield,True,True
+290587,Ellyes Skhiri,Defensive Midfield,True,True
+291417,Ferland Mendy,Left-Back,True,True
+292246,Hee-chan Hwang,Centre-Forward,True,True
+292417,Demarai Gray,Left Winger,True,True
+292808,Wout Faes,Centre-Back,True,True
+292818,Jonathan Bamba,Left Winger,True,True
+293169,Josip Brekalo,Left Winger,True,True
+293194,Borna Sosa,Left-Back,True,True
+293200,Nikola Vlašić,Attacking Midfield,True,True
+294767,Majid Hosseini,Centre-Back,True,True
+294772,Ali Gholizadeh,Right Winger,True,True
+294808,Franck Kessié,Central Midfield,True,True
+295024,Samet Akaydin,Centre-Back,True,True
+295330,Kelechi Iheanacho,Centre-Forward,True,True
+295331,Isaac Success,Centre-Forward,True,True
+295414,Adrián Marín,Left-Back,True,True
+296622,Marco Asensio,Attacking Midfield,True,True
+297070,Hamari Traoré,Right-Back,True,True
+297212,Joe Rodon,Centre-Back,True,True
+297583,Woo-yeong Jeong,Attacking Midfield,True,True
+298091,Harry Souttar,Centre-Back,True,True
+298976,Borja Mayoral,Centre-Forward,True,True
+300168,Mikel Vesga,Defensive Midfield,True,True
+300716,Kieran Tierney,Left-Back,True,True
+301053,Amrinder Singh,Goalkeeper,True,True
+302215,Naby Keïta,Central Midfield,True,True
+302991,Erick Cabaco,Centre-Back,True,True
+303259,Dodi Lukébakio,Right Winger,True,True
+306330,Yassine Meriah,Centre-Back,True,True
+307058,Mehdi Taremi,Centre-Forward,True,True
+308278,Rey Manaj,Centre-Forward,True,True
+308989,Sergio González,Centre-Back,True,True
+309110,Brais Méndez,Attacking Midfield,True,True
+309400,Kai Havertz,Centre-Forward,True,True
+312239,Percy Tau,Right Winger,True,True
+312294,Yeferson Soteldo,Left Winger,True,True
+313094,Jordan Lotomba,Right-Back,True,True
+314295,Reece Oxford,Centre-Back,True,True
+314353,Trent Alexander-Arnold,Right-Back,True,True
+314398,Jae-sung Lee,Attacking Midfield,True,True
+314886,Tiago Dias,Left Winger,True,True
+315131,Timothy Fosu-Mensah,Right-Back,True,True
+315291,Haji Wright,Centre-Forward,True,True
+315604,Diadié Samassékou,Defensive Midfield,True,True
+315779,Christian Pulisic,Right Winger,True,True
+315853,Alessandro Bastoni,Centre-Back,True,True
+315858,Gianluigi Donnarumma,Goalkeeper,True,True
+315867,Gianluca Scamacca,Centre-Forward,True,True
+315969,Scott McTominay,Central Midfield,True,True
+318204,David Raum,Left-Back,True,True
+318507,Paul Bernardoni,Goalkeeper,True,True
+318508,Olivier Boscagli,Centre-Back,True,True
+318528,Marcus Thuram,Centre-Forward,True,True
+319301,Daniel James,Right Winger,True,True
+319859,Mathias Jensen,Central Midfield,True,True
+320141,Çağlar Söyüncü,Centre-Back,True,True
+320748,Sebastian Szymanski,Attacking Midfield,True,True
+320854,Timi Max Elsnik,Central Midfield,True,True
+321195,Ondrej Lingr,Attacking Midfield,True,True
+321247,Emiliano Buendía,Left Winger,True,True
+321528,Denzel Dumfries,Right-Back,True,True
+321647,Grejohn Kyei,Centre-Forward,True,True
+322305,Jean-Victor Makengo,Attacking Midfield,True,True
+324278,Christoph Baumgartner,Attacking Midfield,True,True
+324358,Ollie Watkins,Centre-Forward,True,True
+324795,Mahdi Camara,Central Midfield,True,True
+324803,Nicolas Janvier,Central Midfield,True,True
+325223,Mama Baldé,Centre-Forward,True,True
+326029,Donyell Malen,Centre-Forward,True,True
+326031,Matthijs de Ligt,Centre-Back,True,True
+326330,Frenkie de Jong,Central Midfield,True,True
+327126,Anuar,Right Winger,True,True
+327757,Krzysztof Piatek,Centre-Forward,True,True
+328573,Barnabás Varga,Centre-Forward,True,True
+328609,Derek Cornelius,Centre-Back,True,True
+330126,Karol Świderski,Centre-Forward,True,True
+331059,Luis Chávez,Defensive Midfield,True,True
+331560,Takehiro Tomiyasu,Right-Back,True,True
+332179,Matteo Pessina,Central Midfield,True,True
+332697,Weston McKennie,Central Midfield,True,True
+332705,Tyler Adams,Defensive Midfield,True,True
+332798,Roland Sallai,Right-Back,True,True
+332889,Valentin Rongier,Central Midfield,True,True
+333355,Milad Mohammadi,Left-Back,True,True
+333802,François Kamano,Left Winger,True,True
+333859,Lubambo Musonda,Left-Back,True,True
+335457,Ermedin Demirovic,Centre-Forward,True,True
+336869,Marc Roca,Defensive Midfield,True,True
+336960,Giuseppe Pezzella,Left-Back,True,True
+337333,Alex Král,Central Midfield,True,True
+337715,Umar Sadiq,Centre-Forward,True,True
+337725,Christian Kouamé,Centre-Forward,True,True
+338285,Unai Núñez,Centre-Back,True,True
+338424,Mikel Merino,Central Midfield,True,True
+339314,Deniz Undav,Centre-Forward,True,True
+339820,Amath Ndiaye,Right Winger,True,True
+340322,Nathan Tella,Right Winger,True,True
+340394,Abdelhamid Sabiri,Attacking Midfield,True,True
+340456,Noussair Mazraoui,Right-Back,True,True
+340879,Merih Demiral,Centre-Back,True,True
+341092,Federico Chiesa,Right Winger,True,True
+341429,Davinson Sánchez,Centre-Back,True,True
+341647,Cengiz Ünder,Right Winger,True,True
+341705,Gerson,Central Midfield,True,True
+342229,Kylian Mbappé,Centre-Forward,True,True
+342385,Guido Rodríguez,Defensive Midfield,True,True
+343052,Nicolas Pépé,Right Winger,True,True
+343463,Cyle Larin,Centre-Forward,True,True
+343537,Artem Dovbyk,Centre-Forward,True,True
+344381,Christopher Nkunku,Centre-Forward,True,True
+344869,Simon Banza,Centre-Forward,True,True
+345189,Luka Lochoshvili,Centre-Back,True,True
+345886,Rubén Vargas,Left Winger,True,True
+346289,Mouctar Diakhaby,Centre-Back,True,True
+346483,Mason Mount,Attacking Midfield,True,True
+346779,Ché Adams,Centre-Forward,True,True
+346853,Romano Schmid,Attacking Midfield,True,True
+346890,Noah Okafor,Left Winger,True,True
+347900,Jerdy Schouten,Defensive Midfield,True,True
+348026,Nordi Mukiele,Right-Back,True,True
+348791,Junya Ito,Right Winger,True,True
+348795,Giovani Lo Celso,Attacking Midfield,True,True
+349066,Alexander Isak,Centre-Forward,True,True
+350219,Fabián Ruiz,Central Midfield,True,True
+351478,Mikel Oyarzabal,Centre-Forward,True,True
+351749,Kalvin Phillips,Defensive Midfield,True,True
+351809,Robin Le Normand,Centre-Back,True,True
+353365,Marcus Coco,Right-Back,True,True
+353366,Benjamin Pavard,Centre-Back,True,True
+353399,Romain Del Castillo,Right Winger,True,True
+353403,Samuel Moutoussamy,Central Midfield,True,True
+353404,Gaëtan Perrin,Right Winger,True,True
+354352,Frédéric Guilbert,Right-Back,True,True
+354666,Shamar Nicholson,Centre-Forward,True,True
+354726,Florian Sotoca,Centre-Forward,True,True
+355369,Jordan,Centre-Forward,True,True
+355501,Amadou Diawara,Defensive Midfield,True,True
+355816,Ko Itakura,Centre-Back,True,True
+355998,Uriel Antuna,Right Winger,True,True
+356141,Daichi Kamada,Attacking Midfield,True,True
+357117,Alban Lafont,Goalkeeper,True,True
+357119,Ibrahima Konaté,Centre-Back,True,True
+357498,Dušan Vlahović,Centre-Forward,True,True
+357662,Declan Rice,Central Midfield,True,True
+358165,Yordan Osorio,Centre-Back,True,True
+358250,Joseph Aidoo,Centre-Back,True,True
+358504,Ritsu Doan,Right Winger,True,True
+358515,Jean-Philippe Krasso,Centre-Forward,True,True
+360140,Majeed Ashimeru,Central Midfield,True,True
+360661,Kevin Nisbet,Centre-Forward,True,True
+361104,Sergiño Dest,Right-Back,True,True
+361575,Tymoteusz Puchacz,Left-Back,True,True
+361914,Nayef Aguerd,Centre-Back,True,True
+362108,Gabriel Gudmundsson,Left-Back,True,True
+362977,Josip Juranovic,Right-Back,True,True
+363223,Jack Hendry,Centre-Back,True,True
+364234,Pape Abou Cissé,Centre-Back,True,True
+364240,Moussa Wagué,Right-Back,True,True
+364258,Bernardo,Left-Back,True,True
+364857,Falaye Sacko,Right-Back,True,True
+364861,Fousseni Diabaté,Right Winger,True,True
+365108,Dan Ndoye,Right Winger,True,True
+365394,In-beom Hwang,Defensive Midfield,True,True
+368887,Loïs Openda,Centre-Forward,True,True
+368891,Arthur Theate,Centre-Back,True,True
+369081,Federico Valverde,Central Midfield,True,True
+369567,Sasa Kalajdzic,Centre-Forward,True,True
+369674,Joakim Maehle,Left-Back,True,True
+370846,Timothy Weah,Right Midfield,True,True
+371001,Josip Sutalo,Centre-Back,True,True
+371149,Evan Ndicka,Centre-Back,True,True
+371851,Jaka Bijol,Centre-Back,True,True
+371856,Vanja Drkusic,Centre-Back,True,True
+372246,Carlos Soler,Central Midfield,True,True
+372711,Amine Harit,Left Winger,True,True
+375137,Ismail Jakobs,Left-Back,True,True
+375885,Ibrahim Sangaré,Defensive Midfield,True,True
+376514,Mathías Olivera,Left-Back,True,True
+377219,Selim Amallah,Attacking Midfield,True,True
+378710,Richarlison,Centre-Forward,True,True
+379163,Marius Marin,Defensive Midfield,True,True
+382528,Kerem Aktürkoğlu,Left Winger,True,True
+384461,Jakub Moder,Central Midfield,True,True
+386047,Axel Disasi,Centre-Back,True,True
+386552,Lassana Coulibaly,Central Midfield,True,True
+386726,Yusuf Yazıcı,Attacking Midfield,True,True
+387105,Luka Ivanušec,Attacking Midfield,True,True
+387106,Lovro Majer,Attacking Midfield,True,True
+388165,Yoane Wissa,Centre-Forward,True,True
+388171,Anthony Ralston,Right-Back,True,True
+388198,Nico Schlotterbeck,Centre-Back,True,True
+390177,Nedim Bajrami,Attacking Midfield,True,True
+392757,Marc Guéhi,Centre-Back,True,True
+392770,Angel Gomes,Attacking Midfield,True,True
+392771,Ethan Ampadu,Defensive Midfield,True,True
+393238,Zakaria Aboukhlal,Right Winger,True,True
+393323,Brenden Aaronson,Attacking Midfield,True,True
+394300,Davide Frattesi,Central Midfield,True,True
+395237,Maxence Caqueret,Central Midfield,True,True
+395242,Alexis Flips,Attacking Midfield,True,True
+395693,Houssem Aouar,Attacking Midfield,True,True
+397171,Gideon Mensah,Left-Back,True,True
+398184,Ferran Torres,Centre-Forward,True,True
+399776,Pau Torres,Centre-Back,True,True
+399997,Daniel Arzani,Right Winger,True,True
+400485,Adam Ounas,Right Winger,True,True
+400489,Eljif Elmas,Attacking Midfield,True,True
+401173,Jadon Sancho,Left Winger,True,True
+401922,Samuel Chukwueze,Right Winger,True,True
+402008,Amadou Haidara,Central Midfield,True,True
+402010,Sékou Koïta,Centre-Forward,True,True
+402733,Gonzalo Montiel,Right-Back,True,True
+402979,Orlando Mosquera,Goalkeeper,True,True
+404418,Dávid Hancko,Centre-Back,True,True
+404950,Nicolas Seiwald,Defensive Midfield,True,True
+405398,Takefusa Kubo,Right Winger,True,True
+405564,Giorgi Kochorashvili,Central Midfield,True,True
+405855,Mojmír Chytil,Centre-Forward,True,True
+405885,Giacomo Raspadori,Second Striker,True,True
+406040,Ademola Lookman,Left Winger,True,True
+406625,Lautaro Martínez,Centre-Forward,True,True
+407098,Jakub Kaminski,Left Winger,True,True
+407885,Wajdi Kechrida,Right-Back,True,True
+408574,Joey Veerman,Central Midfield,True,True
+410185,Ronaël Pierre-Gabriel,Right-Back,True,True
+410225,Ismaïla Sarr,Right Winger,True,True
+410425,Yves Bissouma,Defensive Midfield,True,True
+411975,Jules Koundé,Right-Back,True,True
+412363,Rodrygo,Right Winger,True,True
+412823,Joel Latibeaudiere,Centre-Back,True,True
+413039,Bryan Mbeumo,Right Winger,True,True
+413112,Aurélien Tchouaméni,Defensive Midfield,True,True
+413118,Sikou Niakaté,Centre-Back,True,True
+413507,Nikola Milenković,Centre-Back,True,True
+415383,Hervé Koffi,Goalkeeper,True,True
+415666,José Martínez,Defensive Midfield,True,True
+416108,Youcef Atal,Right-Back,True,True
+416245,Vishal Kaith,Goalkeeper,True,True
+416247,Chinglensana Singh,Centre-Back,True,True
+417348,Richie Laryea,Right-Back,True,True
+418651,Yahia Fofana,Goalkeeper,True,True
+418659,Amine Gouiri,Centre-Forward,True,True
+419648,Veljko Birmancevic,Left Winger,True,True
+420465,Tiago Djaló,Centre-Back,True,True
+421637,Frank Onyeka,Central Midfield,True,True
+422377,Aboubakary Koita,Left Winger,True,True
+422850,Ghislain Konan,Left-Back,True,True
+423440,Martín Zubimendi,Defensive Midfield,True,True
+423678,Meschack Elia,Attacking Midfield,True,True
+423744,Billy Gilmour,Defensive Midfield,True,True
+424204,Alphonso Davies,Left-Back,True,True
+425334,Matty Cash,Right-Back,True,True
+425918,Jakub Kiwior,Centre-Back,True,True
+426192,Ben Brereton Díaz,Centre-Forward,True,True
+427572,Zuriko Davitashvili,Left Winger,True,True
+428061,Riley McGree,Central Midfield,True,True
+432852,Deroy Duarte,Central Midfield,True,True
+432982,Andreas Skov Olsen,Right Winger,True,True
+433049,Youssef En-Nesyri,Centre-Forward,True,True
+433177,Bukayo Saka,Right Winger,True,True
+434675,Cody Gakpo,Left Winger,True,True
+439351,Bendegúz Bolla,Right-Back,True,True
+442248,Ethan Pinnock,Centre-Back,True,True
+442531,Edouard Mendy,Goalkeeper,True,True
+442552,Houboulang Mendes,Right-Back,True,True
+442703,Ylber Ramadani,Defensive Midfield,True,True
+445939,Omar Marmoush,Centre-Forward,True,True
+451276,Dominik Szoboszlai,Attacking Midfield,True,True
+453016,Anthony Caci,Right-Back,True,True
+454567,Orkun Kökçü,Central Midfield,True,True
+454576,Róbert Boženík,Centre-Forward,True,True
+454863,András Schäfer,Central Midfield,True,True
+457743,Mohamed Konaté,Centre-Forward,True,True
+458367,Arbër Hoxha,Left Winger,True,True
+459658,Andrea Cambiaso,Left-Back,True,True
+460245,Moritz Jenz,Centre-Back,True,True
+460939,Tijjani Reijnders,Central Midfield,True,True
+461496,Morten Hjulmand,Defensive Midfield,True,True
+461883,Calvin Bassey,Centre-Back,True,True
+462348,Mostafa Mohamed,Centre-Forward,True,True
+465830,Mattéo Guendouzi,Central Midfield,True,True
+465967,Ander Guevara,Central Midfield,True,True
+466336,Nahuel Ferraresi,Centre-Back,True,True
+468198,Joe Aribo,Central Midfield,True,True
+470607,Brennan Johnson,Right Winger,True,True
+470794,Ivan Ilić,Central Midfield,True,True
+474589,Carlos Cuesta,Centre-Back,True,True
+475959,Josko Gvardiol,Centre-Back,True,True
+476701,Manuel Ugarte,Defensive Midfield,True,True
+479037,Keanu Baccus,Defensive Midfield,True,True
+479999,Eberechi Eze,Attacking Midfield,True,True
+480267,Ronald Araujo,Centre-Back,True,True
+480762,Lisandro Martínez,Centre-Back,True,True
+480987,Chris Mepham,Centre-Back,True,True
+482836,David Strelec,Centre-Forward,True,True
+483046,Josip Stanisic,Right-Back,True,True
+483573,Martín Aguirregabiria,Right-Back,True,True
+484547,Jeremie Frimpong,Right-Back,True,True
+484988,Logan Costa,Centre-Back,True,True
+485355,Mehtab Singh,Centre-Back,True,True
+485706,Amadou Onana,Defensive Midfield,True,True
+485729,Fashion Sakala,Left Winger,True,True
+485963,Pape Gueye,Central Midfield,True,True
+486049,Jérémy Doku,Left Winger,True,True
+486624,Musa Barrow,Left Winger,True,True
+487474,Francisco Conceição,Right Winger,True,True
+487504,Kamal Miller,Centre-Back,True,True
+487969,Randal Kolo Muani,Centre-Forward,True,True
+488362,Conor Gallagher,Central Midfield,True,True
+489359,Ao Tanaka,Central Midfield,True,True
+495666,William Saliba,Centre-Back,True,True
+496706,Montassar Talbi,Centre-Back,True,True
+500054,David Jurásek,Left-Back,True,True
+502670,Khvicha Kvaratskhelia,Left Winger,True,True
+502676,Giorgi Mamardashvili,Goalkeeper,True,True
+502722,Luka Sucic,Central Midfield,True,True
+502821,Riccardo Calafiori,Left-Back,True,True
+503482,Min-jae Kim,Centre-Back,True,True
+503680,Neco Williams,Left-Back,True,True
+503770,Folarin Balogun,Centre-Forward,True,True
+503991,Yunus Musah,Central Midfield,True,True
+504215,Giovanni Reyna,Attacking Midfield,True,True
+504849,Kaoru Mitoma,Left Winger,True,True
+507341,Fabian Rieder,Attacking Midfield,True,True
+507345,Leonidas Stergiou,Right-Back,True,True
+509894,Abdulelah Al-Amri,Centre-Back,True,True
+513245,Jesper Lindstrøm,Right Winger,True,True
+520530,Fali Candé,Centre-Back,True,True
+521127,Ayoub El Kaabi,Centre-Forward,True,True
+524315,Hidemasa Morita,Central Midfield,True,True
+525578,Pathé Ciss,Central Midfield,True,True
+527966,Andrei Rațiu,Right-Back,True,True
+531949,Ignatius Ganago,Centre-Forward,True,True
+532732,Igor Diveev,Centre-Back,True,True
+532775,Melvin Bard,Left-Back,True,True
+532776,Amine Adli,Left Winger,True,True
+532938,Luis Romo,Defensive Midfield,True,True
+533295,Patrick Wimmer,Right Winger,True,True
+533738,Jonathan David,Centre-Forward,True,True
+534033,Alexis Mac Allister,Central Midfield,True,True
+534435,Joseph Paintsil,Left Winger,True,True
+538874,Terem Moffi,Centre-Forward,True,True
+538998,Timothée Pembélé,Right-Back,True,True
+540333,Tomas Suslov,Attacking Midfield,True,True
+540941,Mikkel Damsgaard,Attacking Midfield,True,True
+543499,Mohammed Kudus,Right Winger,True,True
+543529,Aguibou Camara,Attacking Midfield,True,True
+543771,Kristjan Asllani,Defensive Midfield,True,True
+543838,Anwar Ali,Centre-Back,True,True
+545538,Lameck Banda,Left Winger,True,True
+548729,Zeki Amdouni,Centre-Forward,True,True
+552057,Adam Hlozek,Centre-Forward,True,True
+552955,Santiago Gimenez,Centre-Forward,True,True
+554903,Mateo Retegui,Centre-Forward,True,True
+557149,Kang-in Lee,Attacking Midfield,True,True
+557459,Micky van de Ven,Centre-Back,True,True
+559482,Naorem Roshan Singh,Left-Back,True,True
+563963,Mohammed Salisu,Centre-Back,True,True
+565093,Bart Verbruggen,Goalkeeper,True,True
+566025,Mohamed Abdelmonem,Centre-Back,True,True
+566823,Achraf Dari,Centre-Back,True,True
+566931,Xavi Simons,Attacking Midfield,True,True
+568005,Jeremy Sarmiento,Left Winger,True,True
+568177,Cole Palmer,Attacking Midfield,True,True
+568559,Radu Drăgușin,Centre-Back,True,True
+568693,Pape Matar Sarr,Central Midfield,True,True
+569598,Youssouf Fofana,Defensive Midfield,True,True
+572326,Christopher Wooh,Centre-Back,True,True
+574671,Strahinja Pavlović,Centre-Back,True,True
+574758,Garcia,Right-Back,True,True
+576024,Julián Alvarez,Centre-Forward,True,True
+578391,Rayan Aït-Nouri,Left-Back,True,True
+578392,Maximilian Beier,Centre-Forward,True,True
+578539,Chris Richards,Centre-Back,True,True
+580195,Jamal Musiala,Attacking Midfield,True,True
+581678,Jude Bellingham,Attacking Midfield,True,True
+585959,Arnaud Kalimuendo,Centre-Forward,True,True
+592735,Gonzalo Plata,Right Winger,True,True
+593482,Azzedine Ounahi,Central Midfield,True,True
+594991,Mohamed Bayo,Centre-Forward,True,True
+596913,Zakhele Lepasa,Centre-Forward,True,True
+598577,Florian Wirtz,Attacking Midfield,True,True
+599663,Faris Moumbagna,Centre-Forward,True,True
+605184,Jean-Clair Todibo,Centre-Back,True,True
+607223,Rayan Cherki,Attacking Midfield,True,True
+610442,Rasmus Højlund,Centre-Forward,True,True
+613725,İsmail Yüksek,Defensive Midfield,True,True
+616341,Nuno Mendes,Left-Back,True,True
+620217,Robin Hranac,Centre-Back,True,True
+623570,Iliman Ndiaye,Right Winger,True,True
+624037,Joris Chotard,Defensive Midfield,True,True
+626913,Boulaye Dia,Centre-Forward,True,True
+627442,Benjamin Sesko,Centre-Forward,True,True
+631996,Brandon Aguilera,Central Midfield,True,True
+633992,Enzo Le Fée,Central Midfield,True,True
+637446,Alistair Johnston,Right-Back,True,True
+637632,Jacob Shaffelburg,Left Winger,True,True
+638793,Tajon Buchanan,Right Winger,True,True
+640428,Eduardo Camavinga,Central Midfield,True,True
+640735,Abdoul Tapsoba,Centre-Forward,True,True
+642347,Akash Mishra,Left-Back,True,True
+644771,Odilon Kossounou,Centre-Back,True,True
+646733,Jim Allevinah,Right Winger,True,True
+648195,Enzo Fernández,Central Midfield,True,True
+649020,Boubacar Traoré,Defensive Midfield,True,True
+649033,Dion Lopy,Defensive Midfield,True,True
+649452,Issa Kaboré,Right-Back,True,True
+650350,Léo Leroy,Central Midfield,True,True
+654982,Bilal El Khannouss,Attacking Midfield,True,True
+658536,Simon Adingra,Left Winger,True,True
+659813,Piero Hincapié,Centre-Back,True,True
+662332,Juan,Centre-Forward,True,True
+671594,Kamory Doumbia,Attacking Midfield,True,True
+676318,Facundo Pellistri,Right Winger,True,True
+684998,Kings Kangwa,Central Midfield,True,True
+688707,Salis Abdul Samed,Defensive Midfield,True,True
+689634,James Gomez,Centre-Back,True,True
+690799,Anthony Rouault,Centre-Back,True,True
+691786,Morgan Guilavogui,Right Winger,True,True
+694509,Moussa Diarra,Centre-Back,True,True
+708265,Bradley Barcola,Left Winger,True,True
+709726,Hugo Ekitiké,Centre-Forward,True,True
+711969,Lorenz Assignon,Right-Back,True,True
+711996,Warmed Omari,Centre-Back,True,True
+711999,Lesley Ugochukwu,Defensive Midfield,True,True
+726114,Mario Mitaj,Left-Back,True,True
+729814,Georges Mikautadze,Centre-Forward,True,True
+731899,Álvaro Zamora,Left Winger,True,True
+743395,Noah Mbamba,Central Midfield,True,True
+743627,Jewison Bennette,Left Winger,True,True
+746695,Kamaldeen Sulemana,Left Winger,True,True
+746781,Evidence Makgopa,Centre-Forward,True,True
+748382,Amin Sarr,Centre-Forward,True,True
+749552,Alieu Fadera,Left Winger,True,True
+776890,Nicolas Jackson,Centre-Forward,True,True
+787912,El Chadaille Bitshiabu,Centre-Back,True,True
+798404,Alidu Seidu,Centre-Back,True,True
+799682,Warren Madrigal,Left Winger,True,True
+807689,Frank Magri,Centre-Forward,True,True
+810092,Warren Zaïre-Emery,Central Midfield,True,True
+810096,Ismaël Gharbi,Left Winger,True,True
+820374,Kobbie Mainoo,Central Midfield,True,True
+822458,Bamba Dieng,Centre-Forward,True,True
+823231,Dango Ouattara,Right Winger,True,True
+836441,Gaspar,Centre-Back,True,True
+845654,Kenan Yıldız,Left Winger,True,True
+847278,Karim Konaté,Centre-Forward,True,True
+847279,Oumar Diakité,Centre-Forward,True,True
+855015,Farès Chaïbi,Attacking Midfield,True,True
+856068,Jeyland Mitchell,Centre-Back,True,True
+861410,Arda Güler,Attacking Midfield,True,True
+900195,Kevin,Left Winger,True,True
+921655,Ismaël Koné,Central Midfield,True,True
+937958,Lamine Yamal,Right Winger,True,True
+1052439,Kendry Páez,Attacking Midfield,True,True
+1064191,Tomás Avilés,Centre-Back,True,True
+1083069,Isaac,Centre-Forward,True,True
+1089202,Moïse Bombito,Centre-Back,True,True
+1149925,Facinet Conte,Centre-Forward,True,True
